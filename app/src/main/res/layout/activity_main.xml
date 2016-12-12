@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <include layout="@layout/title_bar" />
+
+    <!-- Fragment -->
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- 底部RadioGroup -->
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_basic_use"
+            style="@style/tab_main_style"
+            android:text="基本使用" />
+
+        <RadioButton
+            android:id="@+id/rb_custom"
+            style="@style/tab_main_style"
+            android:text="自定义控件" />
+
+        <RadioButton
+            android:id="@+id/rb_common_frame"
+            style="@style/tab_main_style"
+            android:text="常用框架" />
+
+        <RadioButton
+            android:id="@+id/rb_third_party"
+            style="@style/tab_main_style"
+            android:text="第三方类库" />
+    </RadioGroup>
+
+</LinearLayout>
