@@ -5,6 +5,8 @@
     <attr name="itemTitleTextColor" format="reference" />
     <attr name="itemTitleBackground" format="reference" />
     <attr name="itemContentTextColor" format="reference" />
+    <attr name="itemContentBackground" format="reference" />
+    <attr name="itemContentBackgroundPressed" format="reference" />
     <attr name="actionBarTheme" format="reference" />
 
     <!-- 日间模式 -->
@@ -19,6 +21,8 @@
         <item name="itemTitleTextColor">@color/colorBlack</item>
         <item name="itemTitleBackground">@color/dividerColorDay</item>
         <item name="itemContentTextColor">@color/colorBlack</item>
+        <item name="itemContentBackground">@color/itemContentBackgroundDay</item>
+        <item name="itemContentBackgroundPressed">@color/itemContentBackgroundPressedDay</item>
         <item name="actionBarTheme">@style/ThemeActionBarDay</item>
     </style>
 
@@ -45,6 +49,8 @@
         <item name="itemTitleTextColor">@color/colorWhite</item>
         <item name="itemTitleBackground">@color/dividerColorNight</item>
         <item name="itemContentTextColor">@color/colorWhite</item>
+        <item name="itemContentBackground">@color/itemContentBackgroundNight</item>
+        <item name="itemContentBackgroundPressed">@color/itemContentBackgroundPressedNight</item>
         <item name="actionBarTheme">@style/ThemeActionBarNight</item>
     </style>
 
