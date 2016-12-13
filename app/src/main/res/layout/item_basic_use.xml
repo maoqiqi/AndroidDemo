@@ -8,10 +8,11 @@
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#d9d9d9"
+        android:background="?attr/itemTitleBackground"
         android:gravity="center_vertical"
+        android:maxLines="1"
         android:padding="10dp"
-        android:textColor="@color/colorMain"
+        android:textColor="?attr/itemTitleTextColor"
         android:textSize="14sp" />
 
     <TextView
@@ -21,8 +22,9 @@
         android:background="@drawable/bg_tv_selector"
         android:clickable="true"
         android:gravity="center_vertical"
+        android:maxLines="1"
         android:padding="10dp"
-        android:textColor="#000000"
+        android:textColor="?attr/itemContentTextColor"
         android:textSize="16sp" />
 
 </LinearLayout>
