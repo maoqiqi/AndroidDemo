@@ -1,16 +1,5 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="ThemeBaseLight" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorMain</item>
-        <item name="colorPrimaryDark">@color/colorMain</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-    <style name="AppTheme" parent="ThemeBaseLight"></style>
-
-    <style name="ActionBarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar"></style>
-
     <!-- 主页底部样式 -->
     <style name="tab_main_style">
         <item name="android:layout_width">wrap_content</item>
