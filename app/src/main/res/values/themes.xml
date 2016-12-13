@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="dividerColor" format="color" />
+    <attr name="itemTitleTextColor" format="reference" />
+    <attr name="itemTitleBackground" format="reference" />
+    <attr name="itemContentTextColor" format="reference" />
+    <attr name="actionBarTheme" format="reference" />
+
+    <!-- 日间模式 -->
+    <!-- 基本主题设置 -->
+    <style name="ThemeBaseDay" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryDay</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkDay</item>
+        <item name="colorAccent">@color/colorAccentDay</item>
+        <!--<item name="android:windowBackground">@color/windowBackgroundDay</item>-->
+        <!--<item name="windowBackground">@color/windowBackgroundDay</item>-->
+        <item name="dividerColor">@color/dividerColorDay</item>
+        <item name="itemTitleTextColor">@color/colorBlack</item>
+        <item name="itemTitleBackground">@color/dividerColorDay</item>
+        <item name="itemContentTextColor">@color/colorBlack</item>
+        <item name="actionBarTheme">@style/ThemeActionBarDay</item>
+    </style>
+
+    <!-- APP主题 -->
+    <style name="ThemeAppDay" parent="ThemeBaseDay">
+
+    </style>
+
+    <!-- ActionBar主题 -->
+    <style name="ThemeActionBarDay" parent="ThemeOverlay.AppCompat.Light">
+
+    </style>
+
+
+    <!-- 夜间模式 -->
+    <!-- 基本样式主题设置 -->
+    <style name="ThemeBaseNight" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryNight</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkNight</item>
+        <item name="colorAccent">@color/colorAccentNight</item>
+        <!--<item name="android:windowBackground">@color/windowBackgroundNight</item>-->
+        <!--<item name="windowBackground">@color/windowBackgroundNight</item>-->
+        <item name="dividerColor">@color/dividerColorNight</item>
+        <item name="itemTitleTextColor">@color/colorWhite</item>
+        <item name="itemTitleBackground">@color/dividerColorNight</item>
+        <item name="itemContentTextColor">@color/colorWhite</item>
+        <item name="actionBarTheme">@style/ThemeActionBarNight</item>
+    </style>
+
+    <!-- APP主题 -->
+    <style name="ThemeAppNight" parent="ThemeBaseNight">
+
+    </style>
+
+    <!-- ActionBar主题 -->
+    <style name="ThemeActionBarNight" parent="ThemeOverlay.AppCompat.Dark">
+
+    </style>
+
+</resources>
