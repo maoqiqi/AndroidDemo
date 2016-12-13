@@ -16,6 +16,8 @@
     <color name="colorAccentDay">#FF4081</color>
     <color name="windowBackgroundDay">#FFF5F5F5</color>
     <color name="dividerColorDay">#d9d9d9</color>
+    <color name="itemContentBackgroundDay">#ffffff</color>
+    <color name="itemContentBackgroundPressedDay">#eeeeee</color>
 
     <!-- 夜间模式 -->
     <!--<color name="colorPrimaryNight">#673AB7</color>-->
@@ -24,7 +26,8 @@
     <color name="colorPrimaryDarkNight">#222222</color>
     <color name="colorAccentNight">#FF4081</color>
     <color name="windowBackgroundNight">#212121</color>
-    <color name="itemTitleBackground">#d9d9d9</color>
+    <color name="itemContentBackgroundNight">#303030</color>
     <color name="dividerColorNight">#292929</color>
+    <color name="itemContentBackgroundPressedNight">#414141</color>
 
 </resources>
