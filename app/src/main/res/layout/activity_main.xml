@@ -6,9 +6,9 @@
     android:orientation="vertical">
 
     <!-- 标题栏 -->
-    <include layout="@layout/title_bar" />
+    <include layout="@layout/toolbar" />
 
-    <!-- Fragment -->
+    <!-- 内容 -->
     <FrameLayout
         android:id="@+id/fl_content"
         android:layout_width="match_parent"
