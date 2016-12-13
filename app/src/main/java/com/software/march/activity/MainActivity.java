@@ -1,10 +1,13 @@
 package com.software.march.activity;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.RadioGroup;
 
 import com.software.march.R;
@@ -13,6 +16,7 @@ import com.software.march.fragment.BasicUseFragment;
 import com.software.march.fragment.CommonFrameFragment;
 import com.software.march.fragment.CustomFragment;
 import com.software.march.fragment.ThirdPartyFragment;
+import com.software.march.utils.SPUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(SPUtils.getThemeRes(this));
         setContentView(R.layout.activity_main);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -51,6 +56,32 @@ public class MainActivity extends AppCompatActivity {
         radioGroup.setOnCheckedChangeListener(new MyOnCheckedChangeListener());
         // 设置默认选中常用框架
         radioGroup.check(R.id.rb_basic_use);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.switching_theme:
+                SPUtils.changeDayNight(this);
+                setTheme(SPUtils.getThemeRes(this));
+                // recreate();
+
+                Intent intent = getIntent();
+                overridePendingTransition(0, 0);// 不设置进入退出动画
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                finish();
+                overridePendingTransition(0, 0);
+                startActivity(intent);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private final class MyOnCheckedChangeListener implements RadioGroup.OnCheckedChangeListener {
