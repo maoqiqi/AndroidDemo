@@ -15,6 +15,11 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="?attr/dividerColor" />
+
     <!-- 底部RadioGroup -->
     <RadioGroup
         android:id="@+id/radio_group"

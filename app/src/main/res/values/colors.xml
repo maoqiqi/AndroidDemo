@@ -6,7 +6,7 @@
     <color name="colorYellow">#ffff00</color>
     <color name="colorGreen">#00ff00</color>
 
-    <color name="colorRipple">#d9d9d9</color>
+    <!--<color name="colorRipple">#d9d9d9</color>-->
 
     <!-- 日间模式 -->
     <!--<color name="colorPrimaryDay">#3F51B5</color>-->
@@ -14,20 +14,25 @@
     <color name="colorPrimaryDay">#ff33b5e5</color>
     <color name="colorPrimaryDarkDay">#ff33b5e5</color>
     <color name="colorAccentDay">#FF4081</color>
-    <color name="windowBackgroundDay">#FFF5F5F5</color>
+    <!--<color name="windowBackgroundDay">#FFF5F5F5</color>-->
     <color name="dividerColorDay">#d9d9d9</color>
-    <color name="itemContentBackgroundDay">#ffffff</color>
-    <color name="itemContentBackgroundPressedDay">#eeeeee</color>
+    <color name="itemTitleTextColorDay">#878B9A</color>
+    <color name="itemContentBackgroundNormalDay">#ffffff</color>
+    <color name="itemContentBackgroundPressedDay">#EDFAFF</color>
 
     <!-- 夜间模式 -->
     <!--<color name="colorPrimaryNight">#673AB7</color>-->
     <!--<color name="colorPrimaryDarkNight">#512DA8</color>-->
-    <color name="colorPrimaryNight">#222222</color>
-    <color name="colorPrimaryDarkNight">#222222</color>
+    <color name="colorPrimaryNight">#303135</color>
+    <color name="colorPrimaryDarkNight">#303135</color>
     <color name="colorAccentNight">#FF4081</color>
-    <color name="windowBackgroundNight">#212121</color>
-    <color name="itemContentBackgroundNight">#303030</color>
-    <color name="dividerColorNight">#292929</color>
-    <color name="itemContentBackgroundPressedNight">#414141</color>
+    <!--<color name="windowBackgroundNight">#212121</color>-->
+    <color name="dividerColorNight">#393A3F</color>
+    <color name="itemTitleTextColorNight">#878B9A</color>
+    <color name="itemContentBackgroundNormalNight">#414141</color>
+    <color name="itemContentBackgroundPressedNight">#505050</color>
+
+
+    <!--<color name="itemContentBackgroundNight">#303030</color>-->
 
 </resources>
