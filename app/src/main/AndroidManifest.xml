@@ -18,6 +18,9 @@
         <activity
             android:name=".activity.ActivityActivity"
             android:label="@string/label_activity" />
+        <activity
+            android:name=".activity.LifecycleActivity"
+            android:label="@string/label_activity_lifecycle" />
     </application>
 
 </manifest>
