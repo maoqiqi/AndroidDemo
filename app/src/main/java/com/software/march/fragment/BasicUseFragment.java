@@ -1,12 +1,15 @@
 package com.software.march.fragment;
 
+import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.software.march.R;
+import com.software.march.activity.ActivityActivity;
 import com.software.march.adapter.BasicUseAdapter;
 
 import java.util.Arrays;
@@ -63,8 +66,10 @@ public class BasicUseFragment extends BaseFragment {
         map.put(9, "Android 消息机制与异步任务");
         map.put(10, "Android 事件机制");
         map.put(11, "Android 动画");
+        Class<? extends AppCompatActivity>[] clazzs = new Class[data.length];
+        clazzs[0] = ActivityActivity.class;
         // 设置适配器
-        adapter = new BasicUseAdapter(getActivity(), Arrays.asList(data), map);
+        adapter = new BasicUseAdapter(getActivity(), Arrays.asList(data), map, clazzs);
         listView.setAdapter(adapter);
     }
 }

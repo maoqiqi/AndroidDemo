@@ -1,8 +1,11 @@
 package com.software.march.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.software.march.R;
 import com.software.march.appcommonlibrary.CommonAdapter;
@@ -19,10 +22,12 @@ import java.util.Map;
 public class BasicUseAdapter extends CommonAdapter<String> {
 
     private Map<Integer, String> mMap;
+    private Class<? extends AppCompatActivity>[] mClazzs;
 
-    public BasicUseAdapter(Context context, List<String> data, Map<Integer, String> map) {
+    public BasicUseAdapter(Context context, List<String> data, Map<Integer, String> map, Class<? extends AppCompatActivity>[] clazzs) {
         super(context, data);
         mMap = map;
+        mClazzs = clazzs;
     }
 
     @Override
@@ -50,7 +55,12 @@ public class BasicUseAdapter extends CommonAdapter<String> {
             @Override
             public void onClick(View v) {
                 int position = (int) v.getTag();
-                String item = mData.get(position);
+                if (mClazzs[position] != null) {
+                    Intent intent = new Intent(mContext, mClazzs[position]);
+                    mContext.startActivity(intent);
+                } else {
+                    Toast.makeText(mContext, "《" + mData.get(position) + "》 正在开发中", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
