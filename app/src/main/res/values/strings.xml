@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">安卓案例</string>
     <string name="label_activity">Activity生命周期及基本使用</string>
+    <string name="label_activity_lifecycle">Activity生命周期</string>
 </resources>
