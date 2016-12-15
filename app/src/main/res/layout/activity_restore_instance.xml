@@ -20,4 +20,8 @@
         android:paddingRight="16dp"
         android:src="@mipmap/restore_instance" />
 
+    <TextView
+        style="@style/txt_style"
+        android:text="@string/restore_instance_des" />
+
 </LinearLayout>
