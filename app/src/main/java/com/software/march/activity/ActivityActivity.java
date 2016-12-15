@@ -21,6 +21,7 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
     private final String TAG = getClass().getSimpleName();
 
     private Button btnLifecycle;
+    private Button btnRestoreInstance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,9 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
         setSupportActionBar(toolbar);
 
         btnLifecycle = (Button) findViewById(R.id.btn_lifecycle);
+        btnRestoreInstance = (Button) findViewById(R.id.btn_restore_instance);
         btnLifecycle.setOnClickListener(this);
+        btnRestoreInstance.setOnClickListener(this);
     }
 
     @Override
@@ -40,6 +43,9 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
         switch (view.getId()) {
             case R.id.btn_lifecycle:
                 startActivity(new Intent(this, LifecycleActivity.class));
+                break;
+            case R.id.btn_restore_instance:
+                startActivity(new Intent(this, RestoreInstanceActivity.class));
                 break;
         }
     }

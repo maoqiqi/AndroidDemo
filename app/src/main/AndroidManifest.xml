@@ -25,6 +25,9 @@
             android:name=".activity.LifecycleDialogActivity"
             android:label="@string/label_dialog_activity"
             android:theme="@style/ThemeDialog" />
+        <activity
+            android:name=".activity.RestoreInstanceActivity"
+            android:label="@string/label_restore_instance" />
     </application>
 
 </manifest>
