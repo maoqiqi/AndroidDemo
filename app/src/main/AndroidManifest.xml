@@ -21,6 +21,10 @@
         <activity
             android:name=".activity.LifecycleActivity"
             android:label="@string/label_activity_lifecycle" />
+        <activity
+            android:name=".activity.LifecycleDialogActivity"
+            android:label="@string/label_dialog_activity"
+            android:theme="@style/ThemeDialog" />
     </application>
 
 </manifest>

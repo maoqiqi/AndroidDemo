@@ -8,4 +8,15 @@
         android:title="创建Activity"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/new_activity_dialog"
+        android:orderInCategory="2"
+        android:title="创建Activity-Dialog"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/new_dialog"
+        android:orderInCategory="3"
+        android:title="创建Dialog"
+        app:showAsAction="never" />
 </menu>
