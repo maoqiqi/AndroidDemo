@@ -8,21 +8,18 @@
     <!-- 标题栏 -->
     <include layout="@layout/toolbar" />
 
-    <!--Button上的文字自动变大写了-->
-    <!--手动添加属性 android:textAllCaps="false"-->
+    <EditText
+        style="@style/edit_style"
+        android:hint="请输入您的信息" />
 
     <Button
-        android:id="@+id/btn_lifecycle"
+        android:id="@+id/btn_start"
         style="@style/btn_style"
-        android:text="Activity 生命周期" />
+        android:text="一般启动" />
 
     <Button
-        android:id="@+id/btn_restore_instance"
+        android:id="@+id/btn_start_for_result"
         style="@style/btn_style"
-        android:text="保存Activity状态" />
+        android:text="带回调启动" />
 
-    <Button
-        android:id="@+id/btn_start_mode"
-        style="@style/btn_style"
-        android:text="Activity启动方式" />
 </LinearLayout>

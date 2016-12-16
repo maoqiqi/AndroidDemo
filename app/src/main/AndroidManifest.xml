@@ -28,6 +28,9 @@
         <activity
             android:name=".activity.RestoreInstanceActivity"
             android:label="@string/label_restore_instance" />
+        <activity
+            android:name=".activity.StartModeActivity"
+            android:label="@string/label_start_mode" />
     </application>
 
 </manifest>
