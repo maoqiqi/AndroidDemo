@@ -8,23 +8,23 @@
     <!-- 标题栏 -->
     <include layout="@layout/toolbar" />
 
-    <EditText
-        android:id="@+id/et_message"
-        style="@style/edit_style"
-        android:hint="请输入您的信息" />
-
-    <Button
-        android:id="@+id/btn_start"
-        style="@style/btn_style"
-        android:text="一般启动" />
-
-    <Button
-        android:id="@+id/btn_start_for_result"
-        style="@style/btn_style"
-        android:text="带回调启动" />
-
     <TextView
-        android:id="@+id/tv_result"
+        android:id="@+id/tv_message"
         style="@style/txt_style"
         android:textColor="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/btn_back"
+        style="@style/btn_style"
+        android:text="返回" />
+
+    <Button
+        android:id="@+id/btn_back_for_result"
+        style="@style/btn_style"
+        android:text="带回调信息返回" />
+
+    <EditText
+        android:id="@+id/et_result"
+        style="@style/edit_style"
+        android:hint="请输入您的回调信息" />
 </LinearLayout>
