@@ -21,40 +21,62 @@ import com.software.march.utils.SPUtils;
  */
 public class LifecycleActivity extends AppCompatActivity {
 
-    // 生命周期：
+    // Activity 基本三种状态
+    // 1.继续:此 Activity 位于屏幕前台并具有用户焦点。（有时也将此状态称作"运行中"。）
+    // 2.暂停：另一个 Activity 位于屏幕前台并具有用户焦点，但此 Activity 仍可见。
+    // 也就是说，另一个 Activity 显示在此 Activity 上方，并且该 Activity 部分透明或未覆盖整个屏幕。
+    // 暂停的 Activity 处于完全活动状态（Activity 对象保留在内存中，它保留了所有状态和成员信息，并与窗口管理器保持连接），
+    // 但在内存极度不足的情况下，可能会被系统终止。
+    // 3.该 Activity 被另一个 Activity 完全遮盖（该 Activity 目前位于"后台"）。
+    // 已停止的 Activity 同样仍处于活动状态（Activity 对象保留在内存中，它保留了所有状态和成员信息，但未与窗口管理器连接）。
+    // 不过，它对用户不再可见，在他处需要内存时可能会被系统终止。
 
+    // 1.界面从"死亡"-->"运行"
+    // 创建对象-->onCreate()-->onStart()-->onResume()---可见可操作(运行状态)
+    // 2.界面从"运行"-->"死亡"
+    // onPause()-->onStop()-->onDestroy()-->Activity对象成为垃圾对象(不可见也不存在死亡状态)
+    // 3.界面从"运行"-->"停止"
+    // onPause()-->onStop()---不可见但存在
+    // 4.界面从"停止" -->"运行"
+    // onRestart()-->onStart()-->onResume()
+    // 5.界面从"运行"-->"暂停"
+    // onPause()
+    // 6.界面从"暂停"-->"运行"
+    // onResume()
+
+    // 生命周期：
     // 启动LifecycleActivity：
-    // LifecycleActivity1,onCreate()->
-    // LifecycleActivity1,onStart()->
-    // LifecycleActivity1,onResume()->
+    // LifecycleActivity1,onCreate()-->
+    // LifecycleActivity1,onStart()-->
+    // LifecycleActivity1,onResume()-->
     // LifecycleActivity1,onCreateOptionsMenu()
 
     // 打开LifecycleActivity2：
-    // LifecycleActivity1,onOptionsItemSelected()->
-    // LifecycleActivity1,onPause()->
-    // LifecycleActivity2,onCreate()->
-    // LifecycleActivity2,onStart()->
-    // LifecycleActivity2,onResume()->
-    // LifecycleActivity2,onCreateOptionsMenu()->
+    // LifecycleActivity1,onOptionsItemSelected()-->
+    // LifecycleActivity1,onPause()-->
+    // LifecycleActivity2,onCreate()-->
+    // LifecycleActivity2,onStart()-->
+    // LifecycleActivity2,onResume()-->
+    // LifecycleActivity2,onCreateOptionsMenu()-->
     // LifecycleActivity1,onStop()
 
     // 关闭LifecycleActivity2：
-    // LifecycleActivity2,onPause()->
-    // LifecycleActivity1,onRestart()->
-    // LifecycleActivity1,onStart()->
-    // LifecycleActivity1,onResume()->
-    // LifecycleActivity2,onStop()->
+    // LifecycleActivity2,onPause()-->
+    // LifecycleActivity1,onRestart()-->
+    // LifecycleActivity1,onStart()-->
+    // LifecycleActivity1,onResume()-->
+    // LifecycleActivity2,onStop()-->
     // LifecycleActivity2,onDestroy()
 
     // 关闭LifecycleActivity2(屏幕切换方向之后返回)：
-    // LifecycleActivity2,onPause()->
-    // LifecycleActivity1,onDestroy()->
-    // LifecycleActivity1,onCreate()->
-    // LifecycleActivity1,onStart()->
-    // LifecycleActivity1,onResume()->
-    // LifecycleActivity1,onCreateOptionsMenu()->
-    // LifecycleActivity2,onStop()->
-    // LifecycleActivity2,onDestroy()->
+    // LifecycleActivity2,onPause()-->
+    // LifecycleActivity1,onDestroy()-->
+    // LifecycleActivity1,onCreate()-->
+    // LifecycleActivity1,onStart()-->
+    // LifecycleActivity1,onResume()-->
+    // LifecycleActivity1,onCreateOptionsMenu()-->
+    // LifecycleActivity2,onStop()-->
+    // LifecycleActivity2,onDestroy()-->
 
     // 在LifecycleActivity1启动Dialog
     // LifecycleActivity1,onOptionsItemSelected()
@@ -62,37 +84,37 @@ public class LifecycleActivity extends AppCompatActivity {
     // 在LifecycleActivity1关闭Dialog
 
     // 在LifecycleActivity1启动主题为Dialog的Activity
-    // LifecycleActivity1,onOptionsItemSelected()->
+    // LifecycleActivity1,onOptionsItemSelected()-->
     // LifecycleActivity1,onPause()
 
     // 在LifecycleActivity1关闭主题为Dialog的Activity
     // LifecycleActivity1,onResume()
 
     // 从LifecycleActivity1按下Home键,回到桌面
-    // LifecycleActivity1,onPause()->
+    // LifecycleActivity1,onPause()-->
     // LifecycleActivity1,onStop()
 
     // 从LifecycleActivity1按下Home键,回到应用
-    // LifecycleActivity1,onRestart()->
-    // LifecycleActivity1,onStart()->
+    // LifecycleActivity1,onRestart()-->
+    // LifecycleActivity1,onStart()-->
     // LifecycleActivity1,onResume()
 
     // 在LifecycleActivity1锁屏
-    // LifecycleActivity1,onPause()->
+    // LifecycleActivity1,onPause()-->
     // LifecycleActivity1,onStop()
 
     // 在LifecycleActivity1解屏
-    // LifecycleActivity1,onRestart()->
-    // LifecycleActivity1,onStart()->
+    // LifecycleActivity1,onRestart()-->
+    // LifecycleActivity1,onStart()-->
     // LifecycleActivity1,onResume()
 
     // 方向旋转LifecycleActivity1
-    // LifecycleActivity1,onPause()->
-    // LifecycleActivity1,onStop()->
-    // LifecycleActivity1,onDestroy()->
-    // LifecycleActivity1,onCreate()->
-    // LifecycleActivity1,onStart()->
-    // LifecycleActivity1,onResume()->
+    // LifecycleActivity1,onPause()-->
+    // LifecycleActivity1,onStop()-->
+    // LifecycleActivity1,onDestroy()-->
+    // LifecycleActivity1,onCreate()-->
+    // LifecycleActivity1,onStart()-->
+    // LifecycleActivity1,onResume()-->
     // LifecycleActivity1,onCreateOptionsMenu()
 
     private final String NUMBER = "NUMBER";
