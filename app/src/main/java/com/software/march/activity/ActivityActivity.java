@@ -23,6 +23,7 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
     private Button btnLifecycle;
     private Button btnRestoreInstance;
     private Button btnStartMode;
+    private Button btnCommonComponent;
 
     /**
      * 重写的方法：onCreate(Bundle savedInstanceState)
@@ -46,11 +47,13 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
         btnLifecycle = (Button) findViewById(R.id.btn_lifecycle);
         btnRestoreInstance = (Button) findViewById(R.id.btn_restore_instance);
         btnStartMode = (Button) findViewById(R.id.btn_start_mode);
+        btnCommonComponent = (Button) findViewById(R.id.btn_common_component);
 
         // 设置点击监听
         btnLifecycle.setOnClickListener(this);
         btnRestoreInstance.setOnClickListener(this);
         btnStartMode.setOnClickListener(this);
+        btnCommonComponent.setOnClickListener(this);
     }
 
     @Override
@@ -64,6 +67,9 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.btn_start_mode:
                 startActivity(new Intent(this, StartModeActivity.class));
+                break;
+            case R.id.btn_common_component:
+                startActivity(new Intent(this, CommonComponentActivity.class));
                 break;
         }
     }

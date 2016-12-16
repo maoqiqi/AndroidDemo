@@ -12,6 +12,12 @@ import android.widget.TextView;
 import com.software.march.R;
 import com.software.march.utils.SPUtils;
 
+/**
+ * @author Doc.March
+ * @version V 1.0
+ * @Description Activity启动结果显示以及回调
+ * @date 2016/12/16
+ */
 public class ResultActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView tvMessage;

@@ -34,6 +34,21 @@
         <activity
             android:name=".activity.ResultActivity"
             android:label="@string/label_start_mode" />
+        <activity
+            android:name=".activity.CommonComponentActivity"
+            android:label="@string/label_common_component" />
+        <activity
+            android:name=".activity.SimpleComponentActivity"
+            android:label="@string/label_simple_component" />
+        <activity
+            android:name=".activity.BarComponentActivity"
+            android:label="@string/label_bar_component" />
+        <activity
+            android:name=".activity.DialogComponentActivity"
+            android:label="@string/label_dialog_component" />
+        <activity
+            android:name=".activity.MenuComponentActivity"
+            android:label="@string/label_menu_component" />
     </application>
 
 </manifest>
