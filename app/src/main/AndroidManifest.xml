@@ -49,6 +49,15 @@
         <activity
             android:name=".activity.MenuComponentActivity"
             android:label="@string/label_menu_component" />
+        <activity
+            android:name=".activity.LayoutActivity"
+            android:label="@string/label_layout" />
+        <activity
+            android:name=".activity.ListViewActivity"
+            android:label="@string/label_list_view" />
+        <activity
+            android:name=".activity.GridViewActivity"
+            android:label="@string/label_grid_view" />
     </application>
 
 </manifest>

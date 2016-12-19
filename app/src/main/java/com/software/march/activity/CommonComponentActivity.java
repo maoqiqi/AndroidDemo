@@ -18,10 +18,13 @@ import com.software.march.utils.SPUtils;
  */
 public class CommonComponentActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private Button btnLayout;
     private Button btnSimpleComponent;
-    private Button btnMenu;
     private Button btnBar;
     private Button btnDialog;
+    private Button btnMenu;
+    private Button btnListView;
+    private Button btnGridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,21 +36,30 @@ public class CommonComponentActivity extends AppCompatActivity implements View.O
         setSupportActionBar(toolbar);
 
         // 初始化视图对象
+        btnLayout = (Button) findViewById(R.id.btn_layout);
         btnSimpleComponent = (Button) findViewById(R.id.btn_simple_component);
         btnBar = (Button) findViewById(R.id.btn_bar);
         btnDialog = (Button) findViewById(R.id.btn_dialog);
         btnMenu = (Button) findViewById(R.id.btn_menu);
+        btnListView = (Button) findViewById(R.id.btn_list_view);
+        btnGridView = (Button) findViewById(R.id.btn_grid_view);
 
         // 设置点击监听
+        btnLayout.setOnClickListener(this);
         btnSimpleComponent.setOnClickListener(this);
         btnBar.setOnClickListener(this);
         btnDialog.setOnClickListener(this);
         btnMenu.setOnClickListener(this);
+        btnListView.setOnClickListener(this);
+        btnGridView.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
+            case R.id.btn_layout:
+                startActivity(new Intent(this, LayoutActivity.class));
+                break;
             case R.id.btn_simple_component:
                 startActivity(new Intent(this, SimpleComponentActivity.class));
                 break;
@@ -59,6 +71,10 @@ public class CommonComponentActivity extends AppCompatActivity implements View.O
                 break;
             case R.id.btn_menu:
                 startActivity(new Intent(this, MenuComponentActivity.class));
+                break;
+            case R.id.btn_list_view:
+                break;
+            case R.id.btn_grid_view:
                 break;
         }
     }

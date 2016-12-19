@@ -9,6 +9,11 @@
     <include layout="@layout/toolbar" />
 
     <Button
+        android:id="@+id/btn_layout"
+        style="@style/btn_style"
+        android:text="常用的五种布局" />
+
+    <Button
         android:id="@+id/btn_simple_component"
         style="@style/btn_style"
         android:text="简单的组件" />
@@ -27,4 +32,14 @@
         android:id="@+id/btn_menu"
         style="@style/btn_style"
         android:text="Menu组件" />
+
+    <Button
+        android:id="@+id/btn_list_view"
+        style="@style/btn_style"
+        android:text="ListView" />
+
+    <Button
+        android:id="@+id/btn_grid_view"
+        style="@style/btn_style"
+        android:text="GridView" />
 </LinearLayout>
