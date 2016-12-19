@@ -8,4 +8,12 @@
     <!-- 标题栏 -->
     <include layout="@layout/toolbar" />
 
+    <Button
+        android:id="@+id/btn_context_menu"
+        style="@style/btn_style"
+        android:text="上下文菜单" />
+
+    <TextView
+        style="@style/txt_style"
+        android:text="长按按钮显示上下文菜单" />
 </LinearLayout>

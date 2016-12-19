@@ -10,6 +10,7 @@
     <string name="label_common_component">常用组件</string>
     <string name="label_simple_component">简单组件</string>
     <string name="label_bar_component">ProgressBar、SeekBar组件</string>
+    <string name="bar_component_des">1. 滑动下面的滑杆后, 上面的进度条会同步\n2. 滑动到最大值时, 最上面的进度条消失</string>
     <string name="label_dialog_component">Dialog组件</string>
     <string name="label_menu_component">Menu组件</string>
 
