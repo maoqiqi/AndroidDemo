@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <include layout="@layout/toolbar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我是表格布局"
+        android:textColor="?attr/itemContentTextColor"
+        android:textSize="14sp" />
+
+    <!--
+    android:shrinkColumns:设置可收缩的列,(内容过多,则收缩,扩展到第二行,控件没布满TableLayout时不起作用)
+    android:stretchColumns:设置可伸展的列,(有空白则填充)
+    列可以同时具备stretchColumns及shrinkColumns属性
+    android:collapseColumns:设置要隐藏的列(索引列从0开始)
+
+    内部控件属性：
+    android:layout_column:该单元格在第几列显示
+    android:layout_span:该单元格占据列数,默认为1
+    -->
+
+    <!-- 表格1-伸展 -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff0000"
+        android:shrinkColumns="0,1,2">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我占据一行" />
+
+        <TableRow>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="000000000000000000000000" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="111111111111111111111111" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="222222222222222222222222" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="000000000000000000000000" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:text="我占据2列111111111111111111111111" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- 表格2-收缩 -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFCD6B"
+        android:stretchColumns="0,1">
+
+        <TableRow>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="填充一" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="填充二" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="普通三" />
+        </TableRow>
+    </TableLayout>
+
+</TableLayout>

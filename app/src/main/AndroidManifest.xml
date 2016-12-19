@@ -38,6 +38,21 @@
             android:name=".activity.CommonComponentActivity"
             android:label="@string/label_common_component" />
         <activity
+            android:name=".activity.FrameLayoutActivity"
+            android:label="@string/label_frame_layout" />
+        <activity
+            android:name=".activity.LinearLayoutActivity"
+            android:label="@string/label_linear_layout" />
+        <activity
+            android:name=".activity.RelativeLayoutActivity"
+            android:label="@string/label_relative_layout" />
+        <activity
+            android:name=".activity.AbsoluteLayoutActivity"
+            android:label="@string/label_absolute_layout" />
+        <activity
+            android:name=".activity.TableLayoutActivity"
+            android:label="@string/label_table_layout" />
+        <activity
             android:name=".activity.SimpleComponentActivity"
             android:label="@string/label_simple_component" />
         <activity
