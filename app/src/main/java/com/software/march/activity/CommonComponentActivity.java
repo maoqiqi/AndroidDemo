@@ -73,8 +73,10 @@ public class CommonComponentActivity extends AppCompatActivity implements View.O
                 startActivity(new Intent(this, MenuComponentActivity.class));
                 break;
             case R.id.btn_list_view:
+                startActivity(new Intent(this, ListViewActivity.class));
                 break;
             case R.id.btn_grid_view:
+                startActivity(new Intent(this, GridViewActivity.class));
                 break;
         }
     }
