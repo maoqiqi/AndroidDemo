@@ -69,7 +69,7 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(new Intent(this, StartModeActivity.class));
                 break;
             case R.id.btn_common_component:
-                startActivity(new Intent(this, CommonComponentActivity.class));
+                startActivity(new Intent(this, UIActivity.class));
                 break;
         }
     }

@@ -3,7 +3,9 @@ package com.software.march.activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -13,6 +15,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.software.march.R;
 import com.software.march.utils.SPUtils;
@@ -27,12 +30,14 @@ public class SimpleComponentActivity extends AppCompatActivity {
 
     private TextView tvSimpleMessage;
     private EditText etSimpleNumber;
+    private EditText edSimpleSearch;
     private Button btnSimpleSubmit;
     private ImageView ivSimpleIcon;
     private CheckBox cbSimpleBasket;
     private CheckBox cbSimpleFoot;
     private CheckBox cbSimpleTennis;
     private RadioGroup rgSimpleSex;
+    private ToggleButton tbSimple;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +54,18 @@ public class SimpleComponentActivity extends AppCompatActivity {
 
         // 2.EditText
         etSimpleNumber = (EditText) findViewById(R.id.et_simple_number);
+        // 监听Action
+        edSimpleSearch = (EditText) findViewById(R.id.et_simple_search);
+        edSimpleSearch.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
+                if (actionId == EditorInfo.IME_ACTION_SEND) {
+                    Toast.makeText(SimpleComponentActivity.this, edSimpleSearch.getText().toString(), Toast.LENGTH_SHORT).show();
+                    return true;
+                }
+                return false;
+            }
+        });
 
         // 3.Button
         btnSimpleSubmit = (Button) findViewById(R.id.btn_simple_submit);
@@ -57,13 +74,15 @@ public class SimpleComponentActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // 得到内容
-                String number = etSimpleNumber.getText().toString();
+                String number = btnSimpleSubmit.getText().toString();
                 // 提示
                 Toast.makeText(SimpleComponentActivity.this, number, Toast.LENGTH_SHORT).show();
             }
         });
 
-        // 4.ImageView
+        // 4.ImageButton
+
+        // 5.ImageView
         ivSimpleIcon = (ImageView) findViewById(R.id.iv_simple_icon);
         ivSimpleIcon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,7 +94,7 @@ public class SimpleComponentActivity extends AppCompatActivity {
             }
         });
 
-        // 5.CheckBox
+        // 6.CheckBox
         cbSimpleBasket = (CheckBox) findViewById(R.id.cb_simple_basket);
         cbSimpleFoot = (CheckBox) findViewById(R.id.cb_simple_foot);
         cbSimpleTennis = (CheckBox) findViewById(R.id.cb_simple_tennis);
@@ -84,7 +103,7 @@ public class SimpleComponentActivity extends AppCompatActivity {
         cbSimpleFoot.setOnCheckedChangeListener(new MyCheckedChangeListener());
         cbSimpleTennis.setOnCheckedChangeListener(new MyCheckedChangeListener());
 
-        // 6.RadioGroup/RadioButton
+        // 7.RadioGroup/RadioButton
         rgSimpleSex = (RadioGroup) findViewById(R.id.rg_simple_sex);
         rgSimpleSex.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
@@ -98,6 +117,22 @@ public class SimpleComponentActivity extends AppCompatActivity {
                 Toast.makeText(SimpleComponentActivity.this, sex, Toast.LENGTH_SHORT).show();
             }
         });
+
+        // 8.ToggleButton
+        tbSimple = (ToggleButton) findViewById(R.id.toggleButton);
+        tbSimple.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    Toast.makeText(SimpleComponentActivity.this, "开", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(SimpleComponentActivity.this, "关", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        // 9.RatingBar
     }
 
     private class MyCheckedChangeListener implements CompoundButton.OnCheckedChangeListener {

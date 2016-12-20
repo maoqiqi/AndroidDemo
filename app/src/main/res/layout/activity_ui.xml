@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/txt_style"
+                android:text="视图层次结构的图示，它定义了一个 UI 布局。" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:src="@mipmap/viewgroup" />
+
+            <Button
+                android:id="@+id/btn_layout"
+                style="@style/btn_style"
+                android:text="常用的五种布局" />
+
+            <Button
+                android:id="@+id/btn_simple_component"
+                style="@style/btn_style"
+                android:text="简单的组件" />
+
+            <Button
+                android:id="@+id/btn_bar"
+                style="@style/btn_style"
+                android:text="ProgressBar、SeekBar组件" />
+
+            <Button
+                android:id="@+id/btn_dialog"
+                style="@style/btn_style"
+                android:text="Dialog组件" />
+
+            <Button
+                android:id="@+id/btn_menu"
+                style="@style/btn_style"
+                android:text="Menu组件" />
+
+            <Button
+                android:id="@+id/btn_list_view"
+                style="@style/btn_style"
+                android:text="ListView" />
+
+            <Button
+                android:id="@+id/btn_grid_view"
+                style="@style/btn_style"
+                android:text="GridView" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

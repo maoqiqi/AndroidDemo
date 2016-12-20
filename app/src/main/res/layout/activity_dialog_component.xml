@@ -28,6 +28,7 @@
     <Button
         android:id="@+id/btn_pd_1"
         style="@style/btn_style"
+        android:layout_marginTop="32dp"
         android:text="显示圆形进度ProgressDialog" />
 
     <Button
@@ -39,6 +40,7 @@
     <Button
         android:id="@+id/btn_dpd"
         style="@style/btn_style"
+        android:layout_marginTop="32dp"
         android:text="显示DatePickerDialog" />
 
     <Button

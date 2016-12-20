@@ -32,25 +32,57 @@
             android:hint="请输入手机号"
             android:inputType="phone" />
 
-        <Button
-            android:id="@+id/btn_simple_submit"
-            android:layout_width="fill_parent"
+        <EditText
+            android:id="@+id/et_simple_search"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="提交" />
-
-        <ImageView
-            android:id="@+id/iv_simple_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@android:drawable/alert_dark_frame"
-            android:src="@android:drawable/ic_media_play" />
+            android:hint="Specify the Input Method Action"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:textSize="14sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:background="#ff0000"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_simple_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提交" />
+
+            <Button
+                android:id="@+id/button_send"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="无边框" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/iv_simple_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:background="@android:drawable/alert_dark_frame"
+                android:src="@android:drawable/ic_media_play" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#ff6f00">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -103,8 +135,25 @@
                 android:layout_height="wrap_content"
                 android:checked="true"
                 android:text="女" />
-
         </RadioGroup>
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Switch" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
 
     </LinearLayout>
 </LinearLayout>

@@ -29,6 +29,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#ff0000"
             android:text="我是线性布局"
             android:textColor="?attr/itemContentTextColor"
             android:textSize="14sp" />
@@ -36,6 +37,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#ffaa00"
             android:text="我是线性布局"
             android:textColor="?attr/itemContentTextColor"
             android:textSize="14sp" />
@@ -43,6 +45,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#eaff00"
             android:text="我是线性布局"
             android:textColor="?attr/itemContentTextColor"
             android:textSize="14sp" />
@@ -50,6 +53,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#228b22"
             android:text="我是线性布局"
             android:textColor="?attr/itemContentTextColor"
             android:textSize="14sp" />
@@ -57,6 +61,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#008b8b"
             android:text="我是线性布局"
             android:textColor="?attr/itemContentTextColor"
             android:textSize="14sp" />
@@ -77,6 +82,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#ff0000"
             android:text="我是线性布局"
             android:textColor="?attr/itemContentTextColor"
             android:textSize="14sp" />
@@ -84,6 +90,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#ffaa00"
             android:text="我是线性布局"
             android:textColor="?attr/itemContentTextColor"
             android:textSize="14sp" />
@@ -91,6 +98,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#eaff00"
             android:text="我是线性布局"
             android:textColor="?attr/itemContentTextColor"
             android:textSize="14sp" />
@@ -98,6 +106,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#228b22"
             android:text="我是线性布局"
             android:textColor="?attr/itemContentTextColor"
             android:textSize="14sp" />
@@ -105,6 +114,45 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#008b8b"
+            android:text="我是线性布局"
+            android:textColor="?attr/itemContentTextColor"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/txt_style"
+        android:text="线性布局权重"
+        android:textColor="@color/colorAccent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ff0000"
+            android:text="我是线性布局"
+            android:textColor="?attr/itemContentTextColor"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffaa00"
+            android:text="我是线性布局"
+            android:textColor="?attr/itemContentTextColor"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#eaff00"
             android:text="我是线性布局"
             android:textColor="?attr/itemContentTextColor"
             android:textSize="14sp" />

@@ -50,24 +50,24 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
-        android:background="#33ff00" />
+        android:background="#228b22" />
 
     <View
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_gravity="center"
-        android:background="#001aff" />
+        android:background="#008b8b" />
 
     <View
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_gravity="center"
-        android:background="#00ffaa" />
+        android:background="#0011ff" />
 
     <View
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
-        android:background="#c300ff" />
+        android:background="#ff0000" />
 
 </FrameLayout>

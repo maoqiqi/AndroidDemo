@@ -7,7 +7,8 @@
     <string name="label_restore_instance">保存Activity状态</string>
     <string name="restore_instance_des">在两种情况下，Activity 重获用户焦点时可保持状态完好：系统在销毁 Activity 后重建 Activity，Activity 必须恢复之前保存的状态；系统停止 Activity 后继续执行 Activity，并且 Activity 状态保持完好。</string>
     <string name="label_start_mode">Activity启动方式</string>
-    
+
+    <string name="label_ui">用户界面</string>
     <string name="label_layout">常用的五种布局</string>
     <string name="label_frame_layout">帧布局</string>
     <string name="label_linear_layout">线性布局</string>
@@ -15,7 +16,6 @@
     <string name="label_absolute_layout">绝对布局</string>
     <string name="label_table_layout">表格布局</string>
 
-    <string name="label_common_component">常用组件</string>
     <string name="label_simple_component">简单组件</string>
     <string name="label_bar_component">ProgressBar、SeekBar组件</string>
     <string name="bar_component_des">1. 滑动下面的滑杆后, 上面的进度条会同步\n2. 滑动到最大值时, 最上面的进度条消失</string>

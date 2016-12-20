@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<menu>定义 Menu，即菜单项的容器。<menu> 元素必须是该文件的根节点，并且能够包含一个或多个 <item> 和 <group> 元素。-->
+    <!--<item>创建 MenuItem，此元素表示菜单中的一项，可能包含嵌套的 <menu> 元素，以便创建子菜单。-->
+    <!--<group><item> 元素的不可见容器（可选）。它支持您对菜单项进行分类，使其共享活动状态和可见性等属性。-->
+
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/ic_nav_share"
+        android:orderInCategory="2"
+        android:title="分享" />
+
+    <!--<item> 元素支持多个属性，您可使用这些属性定义项目的外观和行为。上述菜单中的项目包括以下属性：-->
+    <!--android:id 项目特有的资源 ID，让应用能够在用户选择项目时识别该项目。-->
+    <!--android:icon 引用一个要用作项目图标的可绘制对象。-->
+    <!--android:title 引用一个要用作项目标题的字符串。-->
+    <!--android:showAsAction 指定此项应作为操作项目显示在应用栏中的时间和方式。-->
+
+    <item
+        android:id="@+id/file"
+        android:orderInCategory="1"
+        android:title="文件">
+
+        <menu>
+            <item
+                android:id="@+id/add"
+                android:title="添加" />
+            <item
+                android:id="@+id/delete"
+                android:title="删除" />
+        </menu>
+    </item>
+</menu>

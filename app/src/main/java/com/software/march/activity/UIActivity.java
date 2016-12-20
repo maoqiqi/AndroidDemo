@@ -13,10 +13,10 @@ import com.software.march.utils.SPUtils;
 /**
  * @author Doc.March
  * @version V 1.0
- * @Description 常用组件
+ * @Description 用户界面
  * @date 2016/12/16
  */
-public class CommonComponentActivity extends AppCompatActivity implements View.OnClickListener {
+public class UIActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btnLayout;
     private Button btnSimpleComponent;
@@ -30,7 +30,7 @@ public class CommonComponentActivity extends AppCompatActivity implements View.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTheme(SPUtils.getThemeRes(this));
-        setContentView(R.layout.activity_common_component);
+        setContentView(R.layout.activity_ui);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

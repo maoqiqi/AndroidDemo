@@ -11,6 +11,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#ff0000"
         android:text="我是绝对布局"
         android:textColor="?attr/itemContentTextColor"
         android:textSize="14sp" />
@@ -18,8 +19,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="16dp"
-        android:layout_y="16dp"
+        android:layout_y="56dp"
+        android:background="#ff0000"
         android:text="我是绝对布局"
         android:textColor="?attr/itemContentTextColor"
         android:textSize="14sp" />
