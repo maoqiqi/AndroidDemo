@@ -71,6 +71,18 @@
             android:name=".activity.ListViewActivity"
             android:label="@string/label_list_view" />
         <activity
+            android:name=".activity.ArrayAdapterActivity"
+            android:label="@string/label_array_adapter" />
+        <activity
+            android:name=".activity.SimpleAdapterActivity"
+            android:label="@string/label_simple_adapter" />
+        <activity
+            android:name=".activity.CursorAdapterActivity"
+            android:label="@string/label_cursor_adapter" />
+        <activity
+            android:name=".activity.BaseAdapterActivity"
+            android:label="@string/label_base_adapter" />
+        <activity
             android:name=".activity.GridViewActivity"
             android:label="@string/label_grid_view" />
     </application>
