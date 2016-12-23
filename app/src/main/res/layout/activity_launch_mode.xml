@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <include layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        style="@style/txt_style" />
+
+    <Button
+        android:id="@+id/btn_launch_mode_standard"
+        style="@style/btn_style"
+        android:text="standard" />
+
+    <Button
+        android:id="@+id/btn_launch_mode_single_top"
+        style="@style/btn_style"
+        android:text="singleTop" />
+
+    <Button
+        android:id="@+id/btn_launch_mode_single_task"
+        style="@style/btn_style"
+        android:text="singleTask" />
+
+    <Button
+        android:id="@+id/btn_launch_mode_single_instance"
+        style="@style/btn_style"
+        android:text="singleInstance" />
+
+</LinearLayout>

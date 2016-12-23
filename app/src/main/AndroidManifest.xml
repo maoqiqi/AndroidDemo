@@ -3,7 +3,10 @@
     package="com.software.march">
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <!-- 打电话的权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 发短信的权限 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -21,6 +24,7 @@
         <activity
             android:name=".activity.ActivityActivity"
             android:label="@string/label_activity" />
+
         <activity
             android:name=".activity.LifecycleActivity"
             android:label="@string/label_activity_lifecycle" />
@@ -31,12 +35,38 @@
         <activity
             android:name=".activity.RestoreInstanceActivity"
             android:label="@string/label_restore_instance" />
+
         <activity
             android:name=".activity.StartModeActivity"
             android:label="@string/label_start_mode" />
         <activity
             android:name=".activity.ResultActivity"
             android:label="@string/label_start_mode" />
+
+        <activity
+            android:name=".activity.LaunchModeActivity"
+            android:label="@string/label_launch_mode" />
+        <activity
+            android:name=".activity.LaunchModeStandardActivity"
+            android:label="@string/label_launch_mode"
+            android:launchMode="standard" />
+        <activity
+            android:name=".activity.LaunchModeSingleTopActivity"
+            android:label="@string/label_launch_mode"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.LaunchModeSingleTaskActivity"
+            android:label="@string/label_launch_mode"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.LaunchModeSingleInstanceActivity"
+            android:label="@string/label_launch_mode"
+            android:launchMode="singleInstance" />
+
+        <activity
+            android:name=".activity.IntentFilterActivity"
+            android:label="@string/label_intent_filter" />
+
         <activity
             android:name=".activity.UIActivity"
             android:label="@string/label_ui" />

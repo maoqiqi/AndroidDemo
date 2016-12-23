@@ -23,6 +23,8 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
     private Button btnLifecycle;
     private Button btnRestoreInstance;
     private Button btnStartMode;
+    private Button btnLaunchMode;
+    private Button btnIntentFilter;
     private Button btnCommonComponent;
 
     /**
@@ -47,12 +49,16 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
         btnLifecycle = (Button) findViewById(R.id.btn_lifecycle);
         btnRestoreInstance = (Button) findViewById(R.id.btn_restore_instance);
         btnStartMode = (Button) findViewById(R.id.btn_start_mode);
+        btnLaunchMode = (Button) findViewById(R.id.btn_launch_mode);
+        btnIntentFilter = (Button) findViewById(R.id.btn_intent_filter);
         btnCommonComponent = (Button) findViewById(R.id.btn_common_component);
 
         // 设置点击监听
         btnLifecycle.setOnClickListener(this);
         btnRestoreInstance.setOnClickListener(this);
         btnStartMode.setOnClickListener(this);
+        btnLaunchMode.setOnClickListener(this);
+        btnIntentFilter.setOnClickListener(this);
         btnCommonComponent.setOnClickListener(this);
     }
 
@@ -67,6 +73,12 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.btn_start_mode:
                 startActivity(new Intent(this, StartModeActivity.class));
+                break;
+            case R.id.btn_launch_mode:
+                startActivity(new Intent(this, LaunchModeActivity.class));
+                break;
+            case R.id.btn_intent_filter:
+                startActivity(new Intent(this, IntentFilterActivity.class));
                 break;
             case R.id.btn_common_component:
                 startActivity(new Intent(this, UIActivity.class));

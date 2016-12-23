@@ -24,7 +24,17 @@
     <Button
         android:id="@+id/btn_start_mode"
         style="@style/btn_style"
-        android:text="Activity启动方式" />
+        android:text="Activity start 方式" />
+
+    <Button
+        android:id="@+id/btn_launch_mode"
+        style="@style/btn_style"
+        android:text="Activity启动模式" />
+
+    <Button
+        android:id="@+id/btn_intent_filter"
+        style="@style/btn_style"
+        android:text="Intent-Filter" />
 
     <Button
         android:id="@+id/btn_common_component"
