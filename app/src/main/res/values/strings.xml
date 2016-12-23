@@ -24,7 +24,7 @@
     <string name="label_list_view">ListView</string>
     <string name="label_array_adapter">ArrayAdapter</string>
     <string name="label_simple_adapter">SimpleAdapter</string>
-    <string name="label_cursor_adapter">CursorAdapter</string>
+    <string name="label_simple_cursor_adapter">SimpleCursorAdapter</string>
     <string name="label_base_adapter">BaseAdapter</string>
     <string name="label_grid_view">GridView</string>
 

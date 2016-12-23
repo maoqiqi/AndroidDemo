@@ -19,9 +19,9 @@
         android:text="SimpleAdapter" />
 
     <Button
-        android:id="@+id/btn_cursor_adapter"
+        android:id="@+id/btn_simple_cursor_adapter"
         style="@style/btn_style"
-        android:text="CursorAdapter" />
+        android:text="SimpleCursorAdapter" />
 
     <Button
         android:id="@+id/btn_base_adapter"

@@ -8,4 +8,24 @@
     <!-- 标题栏 -->
     <include layout="@layout/toolbar" />
 
+    <Button
+        android:id="@+id/btn_array_adapter"
+        style="@style/btn_style"
+        android:text="ArrayAdapter" />
+
+    <Button
+        android:id="@+id/btn_simple_adapter"
+        style="@style/btn_style"
+        android:text="SimpleAdapter" />
+
+    <Button
+        android:id="@+id/btn_simple_cursor_adapter"
+        style="@style/btn_style"
+        android:text="SimpleCursorAdapter" />
+
+    <Button
+        android:id="@+id/btn_base_adapter"
+        style="@style/btn_style"
+        android:text="BaseAdapter" />
+
 </LinearLayout>

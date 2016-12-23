@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.software.march">
 
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -77,8 +80,8 @@
             android:name=".activity.SimpleAdapterActivity"
             android:label="@string/label_simple_adapter" />
         <activity
-            android:name=".activity.CursorAdapterActivity"
-            android:label="@string/label_cursor_adapter" />
+            android:name=".activity.SimpleCursorAdapterActivity"
+            android:label="@string/label_simple_cursor_adapter" />
         <activity
             android:name=".activity.BaseAdapterActivity"
             android:label="@string/label_base_adapter" />

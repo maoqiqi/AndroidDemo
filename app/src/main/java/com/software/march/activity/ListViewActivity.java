@@ -20,7 +20,7 @@ public class ListViewActivity extends AppCompatActivity implements View.OnClickL
 
     private Button btnArrayAdapter;
     private Button btnSimpleAdapter;
-    private Button btnCursorAdapter;
+    private Button btnSimpleCursorAdapter;
     private Button btnBaseAdapter;
 
     @Override
@@ -34,29 +34,38 @@ public class ListViewActivity extends AppCompatActivity implements View.OnClickL
 
         btnArrayAdapter = (Button) findViewById(R.id.btn_array_adapter);
         btnSimpleAdapter = (Button) findViewById(R.id.btn_simple_adapter);
-        btnCursorAdapter = (Button) findViewById(R.id.btn_cursor_adapter);
+        btnSimpleCursorAdapter = (Button) findViewById(R.id.btn_simple_cursor_adapter);
         btnBaseAdapter = (Button) findViewById(R.id.btn_base_adapter);
 
         btnArrayAdapter.setOnClickListener(this);
         btnSimpleAdapter.setOnClickListener(this);
-        btnCursorAdapter.setOnClickListener(this);
+        btnSimpleCursorAdapter.setOnClickListener(this);
         btnBaseAdapter.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
+        Intent intent;
         switch (view.getId()) {
             case R.id.btn_array_adapter:
-                startActivity(new Intent(this, ArrayAdapterActivity.class));
+                intent = new Intent(this, ArrayAdapterActivity.class);
+                intent.putExtra(UIActivity.TYPE, UIActivity.TYPE_LIST_VIEW);
+                startActivity(intent);
                 break;
             case R.id.btn_simple_adapter:
-                startActivity(new Intent(this, SimpleAdapterActivity.class));
+                intent = new Intent(this, SimpleAdapterActivity.class);
+                intent.putExtra(UIActivity.TYPE, UIActivity.TYPE_LIST_VIEW);
+                startActivity(intent);
                 break;
-            case R.id.btn_cursor_adapter:
-                startActivity(new Intent(this, CursorAdapterActivity.class));
+            case R.id.btn_simple_cursor_adapter:
+                intent = new Intent(this, SimpleCursorAdapterActivity.class);
+                intent.putExtra(UIActivity.TYPE, UIActivity.TYPE_LIST_VIEW);
+                startActivity(intent);
                 break;
             case R.id.btn_base_adapter:
-                startActivity(new Intent(this, BaseAdapterActivity.class));
+                intent = new Intent(this, BaseAdapterActivity.class);
+                intent.putExtra(UIActivity.TYPE, UIActivity.TYPE_LIST_VIEW);
+                startActivity(intent);
                 break;
         }
     }

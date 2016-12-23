@@ -42,4 +42,13 @@ public class AppInfoBean {
     public void setPackageName(String packageName) {
         this.packageName = packageName;
     }
+
+    @Override
+    public String toString() {
+        return "AppInfoBean{" +
+                "appName='" + appName + '\'' +
+                ", icon=" + icon +
+                ", packageName='" + packageName + '\'' +
+                '}';
+    }
 }

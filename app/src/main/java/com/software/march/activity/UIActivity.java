@@ -18,6 +18,10 @@ import com.software.march.utils.SPUtils;
  */
 public class UIActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public static final String TYPE = "type";
+    public static final int TYPE_LIST_VIEW = 0;
+    public static final int TYPE_GRID_VIEW = 1;
+
     private Button btnLayout;
     private Button btnSimpleComponent;
     private Button btnBar;
