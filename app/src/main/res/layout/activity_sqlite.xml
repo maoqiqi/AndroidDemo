@@ -33,4 +33,13 @@
         style="@style/btn_style"
         android:text="查询所有记录" />
 
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:divider="?attr/dividerColor"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@android:color/transparent" />
+
 </LinearLayout>

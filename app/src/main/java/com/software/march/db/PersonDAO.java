@@ -224,7 +224,7 @@ public class PersonDAO extends BaseDAO {
     public void deleteById1(int id) {
         SQLiteDatabase database = helper.getReadableDatabase();
         // 执行delete from person where _id=?
-        int count = database.delete("person", "_id=?", new String[]{"1"});
+        int count = database.delete("person", "_id=?", new String[]{String.valueOf(id)});
         database.close();
         Toast.makeText(mContext, "count=" + count, Toast.LENGTH_SHORT).show();
     }
