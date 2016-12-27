@@ -31,4 +31,11 @@
     <string name="label_base_adapter">BaseAdapter</string>
     <string name="label_grid_view">GridView</string>
 
+    <!-- ========================== -->
+    <string name="label_shared_preferences">SharedPreferences</string>
+    <string name="label_file">文件</string>
+    <string name="label_sqlite">SQLite</string>
+    <string name="label_content_provider">ContentProvider</string>
+    <string name="label_net_work">网络</string>
+
 </resources>

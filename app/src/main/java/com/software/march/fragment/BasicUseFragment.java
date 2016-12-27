@@ -1,6 +1,5 @@
 package com.software.march.fragment;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -10,6 +9,11 @@ import android.widget.ListView;
 
 import com.software.march.R;
 import com.software.march.activity.ActivityActivity;
+import com.software.march.activity.ContentProviderActivity;
+import com.software.march.activity.FileActivity;
+import com.software.march.activity.NetWorkActivity;
+import com.software.march.activity.SQLiteActivity;
+import com.software.march.activity.SharedPreferencesActivity;
 import com.software.march.adapter.BasicUseAdapter;
 
 import java.util.Arrays;
@@ -55,7 +59,7 @@ public class BasicUseFragment extends BaseFragment {
     protected void initData() {
         data = new String[]{
                 "Activity", "Service", "BroadcastReceiver", "ContentProvider",
-                "SharedPreferences", "文件存储", "SQLite", "ContentProvider", "网络存储",
+                "SharedPreferences", "文件", "SQLite", "ContentProvider", "网络",
                 "消息机制与异步任务",
                 "事件机制",
                 "动画"
@@ -68,6 +72,11 @@ public class BasicUseFragment extends BaseFragment {
         map.put(11, "Android 动画");
         Class<? extends AppCompatActivity>[] clazzs = new Class[data.length];
         clazzs[0] = ActivityActivity.class;
+        clazzs[4] = SharedPreferencesActivity.class;
+        clazzs[5] = FileActivity.class;
+        clazzs[6] = SQLiteActivity.class;
+        clazzs[7] = ContentProviderActivity.class;
+        clazzs[8] = NetWorkActivity.class;
         // 设置适配器
         adapter = new BasicUseAdapter(getActivity(), Arrays.asList(data), map, clazzs);
         listView.setAdapter(adapter);

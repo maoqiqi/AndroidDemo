@@ -2,11 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.software.march">
 
+    <!-- 读取联系人权限 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <!-- 打电话的权限 -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <!-- 发短信的权限 -->
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- 操作SDCard的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -24,7 +27,6 @@
         <activity
             android:name=".activity.ActivityActivity"
             android:label="@string/label_activity" />
-
         <activity
             android:name=".activity.LifecycleActivity"
             android:label="@string/label_activity_lifecycle" />
@@ -35,14 +37,12 @@
         <activity
             android:name=".activity.RestoreInstanceActivity"
             android:label="@string/label_restore_instance" />
-
         <activity
             android:name=".activity.StartModeActivity"
             android:label="@string/label_start_mode" />
         <activity
             android:name=".activity.ResultActivity"
             android:label="@string/label_start_mode" />
-
         <activity
             android:name=".activity.LaunchModeActivity"
             android:label="@string/label_launch_mode" />
@@ -62,11 +62,9 @@
             android:name=".activity.LaunchModeSingleInstanceActivity"
             android:label="@string/label_launch_mode"
             android:launchMode="singleInstance" />
-
         <activity
             android:name=".activity.IntentFilterActivity"
             android:label="@string/label_intent_filter" />
-
         <activity
             android:name=".activity.UIActivity"
             android:label="@string/label_ui" />
@@ -118,6 +116,23 @@
         <activity
             android:name=".activity.GridViewActivity"
             android:label="@string/label_grid_view" />
+
+        <!-- ========================== -->
+        <activity
+            android:name=".activity.SharedPreferencesActivity"
+            android:label="@string/label_shared_preferences" />
+        <activity
+            android:name=".activity.FileActivity"
+            android:label="@string/label_file" />
+        <activity
+            android:name=".activity.SQLiteActivity"
+            android:label="@string/label_sqlite" />
+        <activity
+            android:name=".activity.ContentProviderActivity"
+            android:label="@string/label_content_provider" />
+        <activity
+            android:name=".activity.NetWorkActivity"
+            android:label="@string/label_net_work" />
     </application>
 
 </manifest>
