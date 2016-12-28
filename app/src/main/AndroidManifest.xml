@@ -135,6 +135,9 @@
         <activity
             android:name=".activity.NetWorkActivity"
             android:label="@string/label_net_work" />
+        <activity
+            android:name=".activity.ApplicationInstallationLocationActivity"
+            android:label="@string/label_application_installation_location" />
     </application>
 
 </manifest>

@@ -37,5 +37,6 @@
     <string name="label_sqlite">SQLite</string>
     <string name="label_content_provider">ContentProvider</string>
     <string name="label_net_work">网络</string>
+    <string name="label_application_installation_location">应用程序安装位置</string>
 
 </resources>
