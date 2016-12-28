@@ -8,4 +8,9 @@
     <!-- 标题栏 -->
     <include layout="@layout/toolbar" />
 
+    <Button
+        android:id="@+id/btn_download_apk"
+        style="@style/btn_style"
+        android:text="下载并安装最新安装包" />
+
 </LinearLayout>
