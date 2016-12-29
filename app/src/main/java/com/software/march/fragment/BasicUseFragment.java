@@ -10,6 +10,7 @@ import android.widget.ListView;
 import com.software.march.R;
 import com.software.march.activity.ActivityActivity;
 import com.software.march.activity.ApplicationInstallationLocationActivity;
+import com.software.march.activity.BroadcastReceiverActivity;
 import com.software.march.activity.ContentProviderActivity;
 import com.software.march.activity.FileActivity;
 import com.software.march.activity.NetWorkActivity;
@@ -75,6 +76,7 @@ public class BasicUseFragment extends BaseFragment {
         map.put(12, "Android 动画");
         Class<? extends AppCompatActivity>[] clazzs = new Class[data.length];
         clazzs[0] = ActivityActivity.class;
+        clazzs[2] = BroadcastReceiverActivity.class;
         clazzs[4] = SharedPreferencesActivity.class;
         clazzs[5] = FileActivity.class;
         clazzs[6] = SQLiteActivity.class;

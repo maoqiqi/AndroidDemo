@@ -31,6 +31,9 @@
     <string name="label_base_adapter">BaseAdapter</string>
     <string name="label_grid_view">GridView</string>
 
+    <string name="label_broadcast_receiver">Broadcast Receiver</string>
+    <string name="label_send_broadcast">Send Broadcast</string>
+
     <!-- ========================== -->
     <string name="label_shared_preferences">SharedPreferences</string>
     <string name="label_file">文件</string>

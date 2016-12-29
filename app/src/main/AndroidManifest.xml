@@ -118,6 +118,12 @@
         <activity
             android:name=".activity.GridViewActivity"
             android:label="@string/label_grid_view" />
+        <activity
+            android:name=".activity.BroadcastReceiverActivity"
+            android:label="@string/label_broadcast_receiver" />
+        <activity
+            android:name=".activity.SendBroadcastActivity"
+            android:label="@string/label_send_broadcast" />
 
         <!-- ========================== -->
         <activity
@@ -138,6 +144,26 @@
         <activity
             android:name=".activity.ApplicationInstallationLocationActivity"
             android:label="@string/label_application_installation_location" />
+
+        <!-- ========================== -->
+        <!-- 静态注册 -->
+        <receiver android:name=".receiver.NormalStaticBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.software.march.NORMAL_STATIC_BROADCAST_RECEIVER" />
+            </intent-filter>
+        </receiver>
+        <!-- 测试发送有序广播(动态注册)需要注册的广播 -->
+        <receiver android:name=".receiver.OrderBroadcastReceiver2">
+            <intent-filter>
+                <action android:name="com.software.march.ORDER_BROADCAST_RECEIVER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.OrderBroadcastReceiver3">
+            <!-- priority 指定当前receiver的优先级,值是0-1000,越大越好 -->
+            <intent-filter android:priority="2147483647">
+                <action android:name="com.software.march.ORDER_BROADCAST_RECEIVER" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
