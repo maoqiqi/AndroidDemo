@@ -124,6 +124,15 @@
         <activity
             android:name=".activity.SendBroadcastActivity"
             android:label="@string/label_send_broadcast" />
+        <activity
+            android:name=".activity.ServiceActivity"
+            android:label="@string/label_service" />
+        <activity
+            android:name=".activity.ServiceLifecycleActivity"
+            android:label="@string/label_service_lifecycle" />
+        <activity
+            android:name=".activity.BindServiceActivity"
+            android:label="@string/label_bind_service" />
 
         <!-- ========================== -->
         <activity
@@ -159,11 +168,17 @@
             </intent-filter>
         </receiver>
         <receiver android:name=".receiver.OrderBroadcastReceiver3">
+
             <!-- priority 指定当前receiver的优先级,值是0-1000,越大越好 -->
             <intent-filter android:priority="2147483647">
                 <action android:name="com.software.march.ORDER_BROADCAST_RECEIVER" />
             </intent-filter>
         </receiver>
+
+        <!-- ========================== -->
+        <service android:name=".service.local.LifecycleService" />
+        <service android:name=".service.local.LocalService" />
+        <service android:name=".service.remote.MessengerService" />
     </application>
 
 </manifest>

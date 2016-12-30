@@ -15,6 +15,7 @@ import com.software.march.activity.ContentProviderActivity;
 import com.software.march.activity.FileActivity;
 import com.software.march.activity.NetWorkActivity;
 import com.software.march.activity.SQLiteActivity;
+import com.software.march.activity.ServiceActivity;
 import com.software.march.activity.SharedPreferencesActivity;
 import com.software.march.adapter.BasicUseAdapter;
 
@@ -76,6 +77,7 @@ public class BasicUseFragment extends BaseFragment {
         map.put(12, "Android 动画");
         Class<? extends AppCompatActivity>[] clazzs = new Class[data.length];
         clazzs[0] = ActivityActivity.class;
+        clazzs[1] = ServiceActivity.class;
         clazzs[2] = BroadcastReceiverActivity.class;
         clazzs[4] = SharedPreferencesActivity.class;
         clazzs[5] = FileActivity.class;

@@ -34,6 +34,10 @@
     <string name="label_broadcast_receiver">Broadcast Receiver</string>
     <string name="label_send_broadcast">Send Broadcast</string>
 
+    <string name="label_service">Service</string>
+    <string name="label_service_lifecycle">Service 生命周期</string>
+    <string name="label_bind_service">绑定服务</string>
+
     <!-- ========================== -->
     <string name="label_shared_preferences">SharedPreferences</string>
     <string name="label_file">文件</string>

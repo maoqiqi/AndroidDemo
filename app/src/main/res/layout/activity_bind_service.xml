@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/txt_style"
+                android:text="扩展 Binder 类"
+                android:textColor="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/btn_bind_service_with_binder"
+                style="@style/btn_style"
+                android:text="绑定服务" />
+
+            <Button
+                android:id="@+id/btn_unbind_service_with_binder"
+                style="@style/btn_style"
+                android:text="解绑服务" />
+
+            <Button
+                android:id="@+id/btn_get_random_number"
+                style="@style/btn_style"
+                android:text="调用 LocalService 的方法" />
+
+            <TextView
+                style="@style/txt_style"
+                android:layout_marginTop="32dp"
+                android:text="使用 Messenger"
+                android:textColor="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/btn_bind_service_with_messenger"
+                style="@style/btn_style"
+                android:text="绑定服务" />
+
+            <Button
+                android:id="@+id/btn_unbind_service_with_messenger"
+                style="@style/btn_style"
+                android:text="解绑服务" />
+
+            <Button
+                android:id="@+id/btn_say_hello"
+                style="@style/btn_style"
+                android:text="给 MessengerService 发送消息" />
+
+            <TextView
+                style="@style/txt_style"
+                android:layout_marginTop="32dp"
+                android:text="使用 AIDL"
+                android:textColor="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/btn_bind_service_with_aidl"
+                style="@style/btn_style"
+                android:text="绑定服务" />
+
+            <Button
+                android:id="@+id/btn_unbind_service_with_aidl"
+                style="@style/btn_style"
+                android:text="解绑服务" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
