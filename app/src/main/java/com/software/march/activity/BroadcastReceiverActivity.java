@@ -84,8 +84,81 @@ public class BroadcastReceiverActivity extends AppCompatActivity implements View
     // 1.多人接收时是否有序:无序,都会同时执行
     // 2.是否可以中断:不可以
     // 有序广播
-    // 1.多人接收时是否有序:有序,根据优先级和注册先后依次执行(优先级大的先执行,代码注册的先执行)
+    // 1.多人接收时是否有序:有序,根据优先级和注册先后依次执行(优先级大的先执行,先注册的先执行)
     // 2.是否可以中断:可以,通过br.abortBroadcast()中断后,后面的接收器不能接收到此广播了
+
+    // 1.发送一般广播(动态注册)
+    // registerReceiver()方法调用时实例化。
+    // NormalDynamicBroadcastReceiver: NormalDynamicBroadcastReceiver()
+    // 第一次发送广播：
+    // NormalDynamicBroadcastReceiver: NormalDynamicBroadcastReceiver onReceive() com.software.march.NORMAL_DYNAMIC_BROADCAST_RECEIVER
+    // 第二次发送广播：
+    // NormalDynamicBroadcastReceiver onReceive() com.software.march.NORMAL_DYNAMIC_BROADCAST_RECEIVER
+
+    // 2.发送一般广播(静态注册)
+    // 发送广播时才实例化对象。
+    // 第一发送广播：
+    // NormalStaticBroadcastReceiver: NormalStaticBroadcastReceiver()
+    // NormalStaticBroadcastReceiver: NormalStaticBroadcastReceiver onReceive() com.software.march.NORMAL_STATIC_BROADCAST_RECEIVER
+    // 第二次发送广播：
+    // NormalStaticBroadcastReceiver: NormalStaticBroadcastReceiver()
+    // NormalStaticBroadcastReceiver: NormalStaticBroadcastReceiver onReceive() com.software.march.NORMAL_STATIC_BROADCAST_RECEIVER
+
+    // 3.发送一般广播(动态/静态)
+    // 全部是动态注册广播：
+    // registerReceiver()方法调用时实例化。
+    // OrderBroadcastReceiver: OrderBroadcastReceiver()
+    // OrderBroadcastReceiver1: OrderBroadcastReceiver1()
+    // 发送广播：优先级高的先调用。
+    // OrderBroadcastReceiver1: OrderBroadcastReceiver1 onReceive() com.software.march.ORDER_BROADCAST_RECEIVER
+    // OrderBroadcastReceiver: OrderBroadcastReceiver onReceive() com.software.march.ORDER_BROADCAST_RECEIVER
+
+    // 全部是静态注册广播：
+    // 发送广播：优先级高的先调用。
+    // OrderBroadcastReceiver3: OrderBroadcastReceiver3()
+    // OrderBroadcastReceiver3: OrderBroadcastReceiver3 onReceive() com.software.march.ORDER_BROADCAST_RECEIVER
+    // OrderBroadcastReceiver2: OrderBroadcastReceiver2()
+    // OrderBroadcastReceiver2: OrderBroadcastReceiver2 onReceive() com.software.march.ORDER_BROADCAST_RECEIVER
+
+    // 动态/静态注册广播都有：
+    // registerReceiver()方法调用时实例化。
+    // OrderBroadcastReceiver: OrderBroadcastReceiver()
+    // OrderBroadcastReceiver1: OrderBroadcastReceiver1()
+    // 发送广播：同时存在动态/静态注册广播，先调用动态注册广播，后调用静态注册(不论优先级别)【根据注册先后依次执行】，同是动态或者静态，优先级高的先调用。(无序)
+    // OrderBroadcastReceiver1: OrderBroadcastReceiver1 onReceive() com.software.march.ORDER_BROADCAST_RECEIVER
+    // OrderBroadcastReceiver: OrderBroadcastReceiver onReceive() com.software.march.ORDER_BROADCAST_RECEIVER
+    // OrderBroadcastReceiver3: OrderBroadcastReceiver3()
+    // OrderBroadcastReceiver3: OrderBroadcastReceiver3 onReceive() com.software.march.ORDER_BROADCAST_RECEIVER
+    // OrderBroadcastReceiver2: OrderBroadcastReceiver2()
+    // OrderBroadcastReceiver2: OrderBroadcastReceiver2 onReceive() com.software.march.ORDER_BROADCAST_RECEIVER
+
+    // 4.发送有序广播(动态注册)
+    // registerReceiver()方法调用时实例化。
+    // OrderBroadcastReceiver: OrderBroadcastReceiver()
+    // OrderBroadcastReceiver1: OrderBroadcastReceiver1()
+    // 发送广播：优先级高的先调用。
+    // OrderBroadcastReceiver1: OrderBroadcastReceiver1 onReceive() com.software.march.ORDER_BROADCAST_RECEIVER
+    // OrderBroadcastReceiver: OrderBroadcastReceiver onReceive() com.software.march.ORDER_BROADCAST_RECEIVER
+
+    // 5.发送有序广播(静态注册)
+    // 发送广播：优先级高的先调用。
+    // OrderBroadcastReceiver3: OrderBroadcastReceiver3()
+    // OrderBroadcastReceiver3: OrderBroadcastReceiver3 onReceive() com.software.march.ORDER_BROADCAST_RECEIVER
+    // OrderBroadcastReceiver2: OrderBroadcastReceiver2()
+    // OrderBroadcastReceiver2: OrderBroadcastReceiver2 onReceive() com.software.march.ORDER_BROADCAST_RECEIVER
+
+    // 6.发送有序广播(动态/静态)
+    // 动态/静态注册广播都有：
+    // registerReceiver()方法调用时实例化。
+    // OrderBroadcastReceiver: OrderBroadcastReceiver()
+    // OrderBroadcastReceiver1: OrderBroadcastReceiver1()
+    // 发送广播：同时存在动态/静态注册广播，优先级高的先调用,同样的优先级,先调用动态注册广播【根据优先级和注册先后依次执行】。(有序)
+    // OrderBroadcastReceiver1: OrderBroadcastReceiver1 onReceive() com.software.march.ORDER_BROADCAST_RECEIVER
+    // OrderBroadcastReceiver3: OrderBroadcastReceiver3()
+    // OrderBroadcastReceiver3: OrderBroadcastReceiver3 onReceive() com.software.march.ORDER_BROADCAST_RECEIVER
+    // OrderBroadcastReceiver: OrderBroadcastReceiver onReceive() com.software.march.ORDER_BROADCAST_RECEIVER
+    // OrderBroadcastReceiver2: OrderBroadcastReceiver2()
+    // OrderBroadcastReceiver2: OrderBroadcastReceiver2 onReceive() com.software.march.ORDER_BROADCAST_RECEIVER
 
     @Override
     public void onClick(View view) {

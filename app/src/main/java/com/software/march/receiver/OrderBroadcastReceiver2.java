@@ -9,7 +9,7 @@ import android.widget.Toast;
 /**
  * @author Doc.March
  * @version V 1.0
- * @Description 有序广播的广播接收器
+ * @Description 静态注册的-有序广播的广播接收器
  * @date 2016/12/29
  */
 public class OrderBroadcastReceiver2 extends BroadcastReceiver {
