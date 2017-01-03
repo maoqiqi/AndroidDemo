@@ -265,6 +265,8 @@ public class BroadcastReceiverActivity extends AppCompatActivity implements View
             // 解注册广播接收器
             unregisterReceiver(receiver);
             receiver = null;
+        }
+        if (orderBroadcastReceiver != null) {
             unregisterReceiver(orderBroadcastReceiver);
             unregisterReceiver(orderBroadcastReceiver1);
             orderBroadcastReceiver = null;
