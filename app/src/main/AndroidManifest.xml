@@ -179,6 +179,7 @@
         <service android:name=".service.local.LifecycleService" />
         <service android:name=".service.local.LocalService" />
         <service android:name=".service.remote.MessengerService" />
+        <service android:name=".service.remote.RemoteService" />
     </application>
 
 </manifest>

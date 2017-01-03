@@ -74,6 +74,17 @@
                 style="@style/btn_style"
                 android:text="解绑服务" />
 
+            <Button
+                android:id="@+id/btn_get_pid"
+                style="@style/btn_style"
+                android:text="getPid()" />
+
+            <Button
+                android:id="@+id/btn_person_by_id"
+                style="@style/btn_style"
+                android:layout_marginBottom="16dp"
+                android:text="getPersonById()" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
+import android.os.Process;
 import android.os.RemoteException;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -16,8 +17,11 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.software.march.R;
+import com.software.march.bean.PersonBean;
 import com.software.march.service.local.LocalService;
+import com.software.march.service.remote.IRemoteService;
 import com.software.march.service.remote.MessengerService;
+import com.software.march.service.remote.RemoteService;
 import com.software.march.utils.SPUtils;
 
 /**
@@ -36,12 +40,17 @@ public class BindServiceActivity extends AppCompatActivity implements View.OnCli
     private Button btnSayHello;
     private Button btnBindServiceWithAidl;
     private Button btnUnbindServiceWithAidl;
+    private Button btnGetPid;
+    private Button btnGetPersonById;
 
     private LocalService mLocalService;
     private boolean mLocalServiceBound = false;
 
     private Messenger mMessenger;
     private boolean mMessengerServiceBound = false;
+
+    private IRemoteService mIRemoteService;
+    private boolean mRemoteServiceBound = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +69,8 @@ public class BindServiceActivity extends AppCompatActivity implements View.OnCli
         btnSayHello = (Button) findViewById(R.id.btn_say_hello);
         btnBindServiceWithAidl = (Button) findViewById(R.id.btn_bind_service_with_aidl);
         btnUnbindServiceWithAidl = (Button) findViewById(R.id.btn_unbind_service_with_aidl);
+        btnGetPid = (Button) findViewById(R.id.btn_get_pid);
+        btnGetPersonById = (Button) findViewById(R.id.btn_person_by_id);
 
         btnBindServiceWithBinder.setOnClickListener(this);
         btnUnbindServiceWithBinder.setOnClickListener(this);
@@ -69,6 +80,8 @@ public class BindServiceActivity extends AppCompatActivity implements View.OnCli
         btnSayHello.setOnClickListener(this);
         btnBindServiceWithAidl.setOnClickListener(this);
         btnUnbindServiceWithAidl.setOnClickListener(this);
+        btnGetPid.setOnClickListener(this);
+        btnGetPersonById.setOnClickListener(this);
     }
 
     // 绑定服务
@@ -156,8 +169,16 @@ public class BindServiceActivity extends AppCompatActivity implements View.OnCli
                 sayHello();
                 break;
             case R.id.btn_bind_service_with_aidl:
+                bindServiceWithAIDL();
                 break;
             case R.id.btn_unbind_service_with_aidl:
+                unbindServiceWithAIDL();
+                break;
+            case R.id.btn_get_pid:
+                getPid();
+                break;
+            case R.id.btn_person_by_id:
+                getPersonById();
                 break;
         }
     }
@@ -187,7 +208,10 @@ public class BindServiceActivity extends AppCompatActivity implements View.OnCli
 
     // 点击按钮时，调用LocalService 的 getRandomNumber() ：
     private void getRandomNumber() {
-        if (!mLocalServiceBound) return;
+        if (!mLocalServiceBound) {
+            Toast.makeText(this, "还没有绑定", Toast.LENGTH_SHORT).show();
+            return;
+        }
         // Call a method from the LocalService.
         // However, if this call were something that might hang, then this request should
         // occur in a separate thread to avoid slowing down the activity performance.
@@ -243,7 +267,10 @@ public class BindServiceActivity extends AppCompatActivity implements View.OnCli
     }
 
     public void sayHello() {
-        if (!mMessengerServiceBound) return;
+        if (!mMessengerServiceBound) {
+            Toast.makeText(this, "还没有绑定", Toast.LENGTH_SHORT).show();
+            return;
+        }
         // Create and send a message to the service, using a supported 'what' value
         Message msg = Message.obtain(null, MessengerService.MSG_SAY_HELLO, 0, 0);
         try {
@@ -258,6 +285,7 @@ public class BindServiceActivity extends AppCompatActivity implements View.OnCli
      */
     private ServiceConnection mMessengerServiceConnection = new ServiceConnection() {
 
+        // Called when the connection with the service is established
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             // This is called when the connection with the service has been established,
@@ -268,6 +296,7 @@ public class BindServiceActivity extends AppCompatActivity implements View.OnCli
             mMessengerServiceBound = true;
         }
 
+        // Called when the connection with the service disconnects unexpectedly
         @Override
         public void onServiceDisconnected(ComponentName componentName) {
             // This is called when the connection with the service has been unexpectedly disconnected -- that is,
@@ -282,6 +311,72 @@ public class BindServiceActivity extends AppCompatActivity implements View.OnCli
 
     // 如需查看如何提供双向消息传递的示例，请参阅 MessengerService.java（服务）和 MessengerServiceActivities.java（客户端）示例。
 
+    private void bindServiceWithAIDL() {
+        // Bind to RemoteService
+        if (!mRemoteServiceBound) {
+            Intent intent = new Intent(this, RemoteService.class);
+            bindService(intent, mRemoteServiceConnection, Context.BIND_AUTO_CREATE);
+            Toast.makeText(this, "使用 AIDL-绑定服务", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "已经绑定了", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void unbindServiceWithAIDL() {
+        // Unbind from the service
+        if (mRemoteServiceBound) {
+            unbindService(mRemoteServiceConnection);
+            mIRemoteService = null;
+            mRemoteServiceBound = false;
+            Toast.makeText(this, "使用 AIDL-解绑服务", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "还没有绑定", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void getPid() {
+        if (!mRemoteServiceBound) {
+            Toast.makeText(this, "还没有绑定", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Toast.makeText(this, "BindServiceActivity getPid():" + Process.myPid(), Toast.LENGTH_SHORT).show();
+        try {
+            mIRemoteService.getPid();
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void getPersonById() {
+        if (!mRemoteServiceBound) {
+            Toast.makeText(this, "还没有绑定", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        try {
+            PersonBean bean = mIRemoteService.getPersonById(1);
+            Toast.makeText(this, bean.getUserName() + "--" + bean.getNickName() + "--" + bean.getAge(), Toast.LENGTH_SHORT).show();
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private ServiceConnection mRemoteServiceConnection = new ServiceConnection() {
+
+        // Called when the connection with the service is established
+        public void onServiceConnected(ComponentName className, IBinder service) {
+            // Following the example above for an AIDL interface,
+            // this gets an instance of the IRemoteInterface, which we can use to call on the service
+            mIRemoteService = IRemoteService.Stub.asInterface(service);
+            mRemoteServiceBound = true;
+        }
+
+        // Called when the connection with the service disconnects unexpectedly
+        public void onServiceDisconnected(ComponentName className) {
+            mIRemoteService = null;
+            mRemoteServiceBound = false;
+        }
+    };
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -294,6 +389,11 @@ public class BindServiceActivity extends AppCompatActivity implements View.OnCli
             unbindService(mMessengerServiceConnection);
             mMessenger = null;
             mMessengerServiceBound = false;
+        }
+        if (mIRemoteService != null) {
+            unbindService(mRemoteServiceConnection);
+            mIRemoteService = null;
+            mRemoteServiceBound = false;
         }
     }
 }
