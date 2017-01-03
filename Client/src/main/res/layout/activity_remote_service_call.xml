@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/txt_style"
+        android:text="使用 AIDL 远程调用"
+        android:textColor="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/btn_bind_service_with_aidl"
+        style="@style/btn_style"
+        android:text="绑定服务" />
+
+    <Button
+        android:id="@+id/btn_unbind_service_with_aidl"
+        style="@style/btn_style"
+        android:text="解绑服务" />
+
+    <Button
+        android:id="@+id/btn_get_pid"
+        style="@style/btn_style"
+        android:text="getPid()" />
+
+    <Button
+        android:id="@+id/btn_person_by_id"
+        style="@style/btn_style"
+        android:layout_marginBottom="16dp"
+        android:text="getPersonById()" />
+
+</LinearLayout>
