@@ -12,6 +12,7 @@ import android.os.Process;
 import android.os.RemoteException;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -21,7 +22,6 @@ import com.software.march.bean.PersonBean;
 import com.software.march.service.local.LocalService;
 import com.software.march.service.remote.IRemoteService;
 import com.software.march.service.remote.MessengerService;
-import com.software.march.service.remote.RemoteService;
 import com.software.march.utils.SPUtils;
 
 /**
@@ -31,6 +31,8 @@ import com.software.march.utils.SPUtils;
  * @date 2016/12/30
  */
 public class BindServiceActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private final String TAG = getClass().getSimpleName();
 
     private Button btnBindServiceWithBinder;
     private Button btnUnbindServiceWithBinder;
@@ -314,7 +316,13 @@ public class BindServiceActivity extends AppCompatActivity implements View.OnCli
     private void bindServiceWithAIDL() {
         // Bind to RemoteService
         if (!mRemoteServiceBound) {
-            Intent intent = new Intent(this, RemoteService.class);
+            // 显式启动
+            // Intent intent = new Intent(this, RemoteService.class);
+            // 隐式启动
+            // Android 5.0 之后隐式声明Intent 启动Service引发的问题
+            // 从源码中的逻辑来看的话,判断一个 intent是不是显式声明的点就是 component 和 package ,只要这两个有一个生效就不算是隐式声明的
+            Intent intent = new Intent("com.software.march.REMOTE_SERVICE");
+            intent.setPackage("com.software.march");
             bindService(intent, mRemoteServiceConnection, Context.BIND_AUTO_CREATE);
             Toast.makeText(this, "使用 AIDL-绑定服务", Toast.LENGTH_SHORT).show();
         } else {
@@ -339,12 +347,14 @@ public class BindServiceActivity extends AppCompatActivity implements View.OnCli
             Toast.makeText(this, "还没有绑定", Toast.LENGTH_SHORT).show();
             return;
         }
-        Toast.makeText(this, "BindServiceActivity getPid():" + Process.myPid(), Toast.LENGTH_SHORT).show();
+        Log.e(TAG, TAG + " getPid():" + Process.myPid());
         try {
             mIRemoteService.getPid();
         } catch (RemoteException e) {
             e.printStackTrace();
         }
+        // com.software.march E/BindServiceActivity: BindServiceActivity getPid():29203
+        // com.software.march E/RemoteService: RemoteService getPid():29203
     }
 
     private void getPersonById() {

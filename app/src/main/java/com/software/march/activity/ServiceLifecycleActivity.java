@@ -119,6 +119,14 @@ public class ServiceLifecycleActivity extends AppCompatActivity {
     // LifecycleService: onUnbind()
     // LifecycleService: onDestroy()
 
+    // startService(intent)
+    // 第一次调用:-->构造方法()-->onCreate()-->onStartCommand()
+    // 后面再调用:-->onStartCommand()
+    // stopService():-->onDestory()
+    // bindService(intent, serviceConnection)
+    // 调用:-->构造方法()-->onCreate()-->onBind()-->onServiceConnected()
+    // unbindService():(中有当前Activity与Service连接)-->onUnbind()-->onDestroy()
+
     // 启动服务
     private void startService() {
         if (intent == null) {

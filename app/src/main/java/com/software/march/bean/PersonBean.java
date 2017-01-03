@@ -76,6 +76,7 @@ public class PersonBean implements Parcelable {
         return 0;
     }
 
+    // 将当前对象的属性数据打成包: 写到包对象中
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeInt(id);
@@ -84,13 +85,16 @@ public class PersonBean implements Parcelable {
         parcel.writeInt(age);
     }
 
+    // 添加一个静态成员,名为CREATOR,该对象实现了Parcelable.Creator接口
     public static final Creator<PersonBean> CREATOR = new Creator<PersonBean>() {
 
+        // 解包: 读取包中的数据并封装成对象
         @Override
         public PersonBean createFromParcel(Parcel in) {
             return new PersonBean(in);
         }
 
+        // 返回一个指定大小的对象容器
         @Override
         public PersonBean[] newArray(int size) {
             return new PersonBean[size];

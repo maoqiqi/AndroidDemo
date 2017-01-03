@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.os.Process;
 import android.os.RemoteException;
-import android.widget.Toast;
+import android.util.Log;
 
 import com.software.march.bean.PersonBean;
 
@@ -131,6 +131,10 @@ public class RemoteService extends Service {
     // 1.对象是跨进程计数的引用。
     // 2.您可以将匿名对象作为方法参数发送。
 
+    public static final String ACTION_REMOTE_SERVICE = "com.software.march.REMOTE_SERVICE";
+
+    private final String TAG = getClass().getSimpleName();
+
     @Override
     public IBinder onBind(Intent intent) {
         return mBinder;
@@ -140,7 +144,7 @@ public class RemoteService extends Service {
 
         @Override
         public int getPid() throws RemoteException {
-            Toast.makeText(getApplicationContext(), "IRemoteService.Stub getPid():" + Process.myPid(), Toast.LENGTH_SHORT).show();
+            Log.e(TAG, TAG + " getPid():" + Process.myPid());
             return Process.myPid();
         }
 

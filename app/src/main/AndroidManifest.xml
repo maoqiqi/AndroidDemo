@@ -178,8 +178,16 @@
         <!-- ========================== -->
         <service android:name=".service.local.LifecycleService" />
         <service android:name=".service.local.LocalService" />
-        <service android:name=".service.remote.MessengerService" />
-        <service android:name=".service.remote.RemoteService" />
+        <service android:name=".service.remote.MessengerService">
+            <intent-filter>
+                <action android:name="com.software.march.MESSENGER_SERVICE" />
+            </intent-filter>
+        </service>
+        <service android:name=".service.remote.RemoteService">
+            <intent-filter>
+                <action android:name="com.software.march.REMOTE_SERVICE" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
