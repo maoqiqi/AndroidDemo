@@ -79,6 +79,7 @@ public class BasicUseFragment extends BaseFragment {
         clazzs[0] = ActivityActivity.class;
         clazzs[1] = ServiceActivity.class;
         clazzs[2] = BroadcastReceiverActivity.class;
+        clazzs[3] = ContentProviderActivity.class;
         clazzs[4] = SharedPreferencesActivity.class;
         clazzs[5] = FileActivity.class;
         clazzs[6] = SQLiteActivity.class;

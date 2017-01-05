@@ -119,12 +119,6 @@
             android:name=".activity.GridViewActivity"
             android:label="@string/label_grid_view" />
         <activity
-            android:name=".activity.BroadcastReceiverActivity"
-            android:label="@string/label_broadcast_receiver" />
-        <activity
-            android:name=".activity.SendBroadcastActivity"
-            android:label="@string/label_send_broadcast" />
-        <activity
             android:name=".activity.ServiceActivity"
             android:label="@string/label_service" />
         <activity
@@ -133,6 +127,18 @@
         <activity
             android:name=".activity.BindServiceActivity"
             android:label="@string/label_bind_service" />
+        <activity
+            android:name=".activity.BroadcastReceiverActivity"
+            android:label="@string/label_broadcast_receiver" />
+        <activity
+            android:name=".activity.SendBroadcastActivity"
+            android:label="@string/label_send_broadcast" />
+        <activity
+            android:name=".activity.ContentProviderActivity"
+            android:label="@string/label_content_provider" />
+        <activity
+            android:name=".activity.PersonProviderActivity"
+            android:label="@string/label_person_provider" />
 
         <!-- ========================== -->
         <activity
@@ -144,9 +150,6 @@
         <activity
             android:name=".activity.SQLiteActivity"
             android:label="@string/label_sqlite" />
-        <activity
-            android:name=".activity.ContentProviderActivity"
-            android:label="@string/label_content_provider" />
         <activity
             android:name=".activity.NetWorkActivity"
             android:label="@string/label_net_work" />
@@ -188,6 +191,11 @@
                 <action android:name="com.software.march.REMOTE_SERVICE" />
             </intent-filter>
         </service>
+
+        <!-- ========================== -->
+        <provider
+            android:name=".provider.PersonProvider"
+            android:authorities="com.software.march.provider" />
     </application>
 
 </manifest>
