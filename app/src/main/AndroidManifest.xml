@@ -164,6 +164,11 @@
             android:label="@string/label_application_installation_location" />
 
         <!-- ========================== -->
+        <activity
+            android:name=".activity.HandlerActivity"
+            android:label="@string/label_handler" />
+
+        <!-- ========================== -->
         <!-- 静态注册 -->
         <receiver android:name=".receiver.NormalStaticBroadcastReceiver">
             <intent-filter>

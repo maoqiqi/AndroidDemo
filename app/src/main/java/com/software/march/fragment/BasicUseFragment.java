@@ -13,6 +13,7 @@ import com.software.march.activity.ApplicationInstallationLocationActivity;
 import com.software.march.activity.BroadcastReceiverActivity;
 import com.software.march.activity.ContentProviderActivity;
 import com.software.march.activity.DataBackupActivity;
+import com.software.march.activity.HandlerActivity;
 import com.software.march.activity.ServiceActivity;
 import com.software.march.activity.StorageOptionsActivity;
 import com.software.march.adapter.BasicUseAdapter;
@@ -61,16 +62,16 @@ public class BasicUseFragment extends BaseFragment {
         data = new String[]{
                 "Activity", "Service", "BroadcastReceiver", "ContentProvider",
                 "存储选项", "数据备份", "应用安装位置",
-                "消息机制与异步任务",
+                "消息机制", "异步任务",
                 "事件机制",
                 "动画"
         };
         Map<Integer, String> map = new HashMap<>();
         map.put(0, "Android 四大应用组件");
         map.put(4, "数据存储");
-        map.put(7, "Android 消息机制与异步任务");
-        map.put(8, "Android 事件机制");
-        map.put(9, "Android 动画");
+        map.put(7, "消息机制与异步任务");
+        map.put(9, "Android 事件机制");
+        map.put(10, "Android 动画");
         Class<? extends AppCompatActivity>[] clazzs = new Class[data.length];
         clazzs[0] = ActivityActivity.class;
         clazzs[1] = ServiceActivity.class;
@@ -79,6 +80,7 @@ public class BasicUseFragment extends BaseFragment {
         clazzs[4] = StorageOptionsActivity.class;
         clazzs[5] = DataBackupActivity.class;
         clazzs[6] = ApplicationInstallationLocationActivity.class;
+        clazzs[7] = HandlerActivity.class;
         // 设置适配器
         adapter = new BasicUseAdapter(getActivity(), Arrays.asList(data), map, clazzs);
         listView.setAdapter(adapter);

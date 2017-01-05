@@ -49,4 +49,6 @@
     <string name="label_data_backup">数据备份</string>
     <string name="label_application_installation_location">应用程序安装位置</string>
 
+    <!-- ========================== -->
+    <string name="label_handler">消息机制</string>
 </resources>
