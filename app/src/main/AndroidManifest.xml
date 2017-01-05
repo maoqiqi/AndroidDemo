@@ -167,6 +167,9 @@
         <activity
             android:name=".activity.HandlerActivity"
             android:label="@string/label_handler" />
+        <activity
+            android:name=".activity.HandlerDemoActivity"
+            android:label="@string/label_handler_demo" />
 
         <!-- ========================== -->
         <!-- 静态注册 -->

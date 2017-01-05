@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <include layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        style="@style/txt_style"
+        android:text="10"
+        android:textColor="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/btn_increase"
+        style="@style/btn_style"
+        android:text="自动增加" />
+
+    <Button
+        android:id="@+id/btn_decrease"
+        style="@style/btn_style"
+        android:text="自动减少" />
+
+    <Button
+        android:id="@+id/btn_pause"
+        style="@style/btn_style"
+        android:enabled="false"
+        android:text="暂停" />
+
+</LinearLayout>

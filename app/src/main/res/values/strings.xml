@@ -51,4 +51,5 @@
 
     <!-- ========================== -->
     <string name="label_handler">消息机制</string>
+    <string name="label_handler_demo">Handler使用Demo</string>
 </resources>
