@@ -142,6 +142,9 @@
 
         <!-- ========================== -->
         <activity
+            android:name=".activity.StorageOptionsActivity"
+            android:label="@string/label_storage_options" />
+        <activity
             android:name=".activity.SharedPreferencesActivity"
             android:label="@string/label_shared_preferences" />
         <activity
@@ -153,6 +156,9 @@
         <activity
             android:name=".activity.NetWorkActivity"
             android:label="@string/label_net_work" />
+        <activity
+            android:name=".activity.DataBackupActivity"
+            android:label="@string/label_data_backup" />
         <activity
             android:name=".activity.ApplicationInstallationLocationActivity"
             android:label="@string/label_application_installation_location" />

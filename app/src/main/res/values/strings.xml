@@ -39,12 +39,14 @@
     <string name="label_bind_service">绑定服务</string>
 
     <!-- ========================== -->
+    <string name="label_storage_options">存储选项</string>
     <string name="label_shared_preferences">SharedPreferences</string>
     <string name="label_file">文件</string>
     <string name="label_sqlite">SQLite</string>
     <string name="label_content_provider">系统 Content Provider</string>
     <string name="label_person_provider">自定义 Content Provider</string>
     <string name="label_net_work">网络</string>
+    <string name="label_data_backup">数据备份</string>
     <string name="label_application_installation_location">应用程序安装位置</string>
 
 </resources>
