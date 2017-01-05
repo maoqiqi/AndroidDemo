@@ -210,6 +210,8 @@
         <provider
             android:name=".provider.PersonProvider"
             android:authorities="com.software.march.provider" />
+
+        <activity android:name=".activity.AsyncTaskActivity"></activity>
     </application>
 
 </manifest>

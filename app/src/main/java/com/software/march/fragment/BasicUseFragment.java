@@ -10,6 +10,7 @@ import android.widget.ListView;
 import com.software.march.R;
 import com.software.march.activity.ActivityActivity;
 import com.software.march.activity.ApplicationInstallationLocationActivity;
+import com.software.march.activity.AsyncTaskActivity;
 import com.software.march.activity.BroadcastReceiverActivity;
 import com.software.march.activity.ContentProviderActivity;
 import com.software.march.activity.DataBackupActivity;
@@ -81,6 +82,7 @@ public class BasicUseFragment extends BaseFragment {
         clazzs[5] = DataBackupActivity.class;
         clazzs[6] = ApplicationInstallationLocationActivity.class;
         clazzs[7] = HandlerActivity.class;
+        clazzs[8] = AsyncTaskActivity.class;
         // 设置适配器
         adapter = new BasicUseAdapter(getActivity(), Arrays.asList(data), map, clazzs);
         listView.setAdapter(adapter);
