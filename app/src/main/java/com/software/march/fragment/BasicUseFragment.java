@@ -14,6 +14,7 @@ import com.software.march.activity.AsyncTaskActivity;
 import com.software.march.activity.BroadcastReceiverActivity;
 import com.software.march.activity.ContentProviderActivity;
 import com.software.march.activity.DataBackupActivity;
+import com.software.march.activity.EventActivity;
 import com.software.march.activity.HandlerActivity;
 import com.software.march.activity.ServiceActivity;
 import com.software.march.activity.StorageOptionsActivity;
@@ -71,7 +72,7 @@ public class BasicUseFragment extends BaseFragment {
         map.put(0, "Android 四大应用组件");
         map.put(4, "数据存储");
         map.put(7, "消息机制与异步任务");
-        map.put(9, "Android 事件机制");
+        map.put(9, "事件机制");
         map.put(10, "Android 动画");
         Class<? extends AppCompatActivity>[] clazzs = new Class[data.length];
         clazzs[0] = ActivityActivity.class;
@@ -83,6 +84,7 @@ public class BasicUseFragment extends BaseFragment {
         clazzs[6] = ApplicationInstallationLocationActivity.class;
         clazzs[7] = HandlerActivity.class;
         clazzs[8] = AsyncTaskActivity.class;
+        clazzs[9] = EventActivity.class;
         // 设置适配器
         adapter = new BasicUseAdapter(getActivity(), Arrays.asList(data), map, clazzs);
         listView.setAdapter(adapter);

@@ -52,4 +52,8 @@
     <!-- ========================== -->
     <string name="label_handler">消息机制</string>
     <string name="label_handler_demo">Handler使用Demo</string>
+    <string name="label_async_task">异步任务</string>
+    <string name="label_event">事件机制</string>
+    <string name="label_motion_event">MotionEvent测试</string>
+    <string name="label_key_event">KeyEvent测试</string>
 </resources>

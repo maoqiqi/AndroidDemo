@@ -170,6 +170,20 @@
         <activity
             android:name=".activity.HandlerDemoActivity"
             android:label="@string/label_handler_demo" />
+        <activity
+            android:name=".activity.AsyncTaskActivity"
+            android:label="@string/label_async_task" />
+
+        <!-- ========================== -->
+        <activity
+            android:name=".activity.EventActivity"
+            android:label="@string/label_event" />
+        <activity
+            android:name=".activity.MotionEventActivity"
+            android:label="@string/label_motion_event" />
+        <activity
+            android:name=".activity.KeyEventActivity"
+            android:label="@string/label_key_event" />
 
         <!-- ========================== -->
         <!-- 静态注册 -->
@@ -210,8 +224,6 @@
         <provider
             android:name=".provider.PersonProvider"
             android:authorities="com.software.march.provider" />
-
-        <activity android:name=".activity.AsyncTaskActivity"></activity>
     </application>
 
 </manifest>
