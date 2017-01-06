@@ -184,6 +184,12 @@
         <activity
             android:name=".activity.KeyEventActivity"
             android:label="@string/label_key_event" />
+        <activity
+            android:name=".activity.MotionEventDemoActivity"
+            android:label="@string/label_motion_event_demo" />
+        <activity
+            android:name=".activity.KeyEventDemoActivity"
+            android:label="@string/label_key_event_demo" />
 
         <!-- ========================== -->
         <!-- 静态注册 -->

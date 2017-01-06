@@ -20,6 +20,8 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
 
     private Button btnMotionEvent;
     private Button btnKeyEvent;
+    private Button btnMotionEventDemo;
+    private Button btnKeyEventDemo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +34,13 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
 
         btnMotionEvent = (Button) findViewById(R.id.btn_motion_event);
         btnKeyEvent = (Button) findViewById(R.id.btn_key_event);
+        btnMotionEventDemo = (Button) findViewById(R.id.btn_motion_event_demo);
+        btnKeyEventDemo = (Button) findViewById(R.id.btn_key_event_demo);
 
         btnMotionEvent.setOnClickListener(this);
         btnKeyEvent.setOnClickListener(this);
+        btnMotionEventDemo.setOnClickListener(this);
+        btnKeyEventDemo.setOnClickListener(this);
     }
 
     @Override
@@ -45,6 +51,12 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.btn_key_event:
                 startActivity(new Intent(this, KeyEventActivity.class));
+                break;
+            case R.id.btn_motion_event_demo:
+                startActivity(new Intent(this, MotionEventDemoActivity.class));
+                break;
+            case R.id.btn_key_event_demo:
+                startActivity(new Intent(this, KeyEventDemoActivity.class));
                 break;
         }
     }

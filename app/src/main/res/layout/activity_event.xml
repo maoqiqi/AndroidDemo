@@ -18,4 +18,14 @@
         style="@style/btn_style"
         android:text="KeyEvent测试" />
 
+    <Button
+        android:id="@+id/btn_motion_event_demo"
+        style="@style/btn_style"
+        android:text="MotionEvent案例" />
+
+    <Button
+        android:id="@+id/btn_key_event_demo"
+        style="@style/btn_style"
+        android:text="KeyEvent案例" />
+
 </LinearLayout>

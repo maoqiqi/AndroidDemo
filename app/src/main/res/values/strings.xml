@@ -56,4 +56,6 @@
     <string name="label_event">事件机制</string>
     <string name="label_motion_event">MotionEvent测试</string>
     <string name="label_key_event">KeyEvent测试</string>
+    <string name="label_motion_event_demo">MotionEvent案例</string>
+    <string name="label_key_event_demo">KeyEvent案例</string>
 </resources>
