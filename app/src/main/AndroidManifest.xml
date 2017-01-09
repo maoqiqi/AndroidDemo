@@ -119,6 +119,15 @@
             android:name=".activity.GridViewActivity"
             android:label="@string/label_grid_view" />
         <activity
+            android:name=".activity.FragmentActivity"
+            android:label="@string/label_fragment" />
+        <activity
+            android:name=".activity.StaticFragmentActivity"
+            android:label="@string/label_static_fragment" />
+        <activity
+            android:name=".activity.DynamicFragmentActivity"
+            android:label="@string/label_dynamic_fragment" />
+        <activity
             android:name=".activity.ServiceActivity"
             android:label="@string/label_service" />
         <activity

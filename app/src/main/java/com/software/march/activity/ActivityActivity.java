@@ -13,8 +13,9 @@ import com.software.march.utils.SPUtils;
 /**
  * @author Doc.March
  * @version V 1.0
- * @Description Activity生命周期及基本使用
+ * @Description Activity相关内容
  * @date 2016/12/14
+ * @update 2017/1/9
  */
 public class ActivityActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -26,6 +27,7 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
     private Button btnLaunchMode;
     private Button btnIntentFilter;
     private Button btnCommonComponent;
+    private Button btnFragment;
 
     /**
      * 重写的方法：onCreate(Bundle savedInstanceState)
@@ -52,6 +54,7 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
         btnLaunchMode = (Button) findViewById(R.id.btn_launch_mode);
         btnIntentFilter = (Button) findViewById(R.id.btn_intent_filter);
         btnCommonComponent = (Button) findViewById(R.id.btn_common_component);
+        btnFragment = (Button) findViewById(R.id.btn_fragment);
 
         // 设置点击监听
         btnLifecycle.setOnClickListener(this);
@@ -60,6 +63,7 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
         btnLaunchMode.setOnClickListener(this);
         btnIntentFilter.setOnClickListener(this);
         btnCommonComponent.setOnClickListener(this);
+        btnFragment.setOnClickListener(this);
     }
 
     @Override
@@ -82,6 +86,9 @@ public class ActivityActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.btn_common_component:
                 startActivity(new Intent(this, UIActivity.class));
+                break;
+            case R.id.btn_fragment:
+                startActivity(new Intent(this, FragmentActivity.class));
                 break;
         }
     }

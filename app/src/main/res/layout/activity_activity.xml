@@ -40,4 +40,9 @@
         android:id="@+id/btn_common_component"
         style="@style/btn_style"
         android:text="用户界面" />
+
+    <Button
+        android:id="@+id/btn_fragment"
+        style="@style/btn_style"
+        android:text="Fragment" />
 </LinearLayout>
