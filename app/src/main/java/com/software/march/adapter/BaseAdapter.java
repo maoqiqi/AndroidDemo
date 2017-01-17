@@ -19,12 +19,12 @@ import java.util.Map;
  * @Description
  * @date 2016/11/5
  */
-public class BasicUseAdapter extends CommonAdapter<String> {
+public class BaseAdapter extends CommonAdapter<String> {
 
     private Map<Integer, String> mMap;
     private Class<? extends AppCompatActivity>[] mClazzs;
 
-    public BasicUseAdapter(Context context, List<String> data, Map<Integer, String> map, Class<? extends AppCompatActivity>[] clazzs) {
+    public BaseAdapter(Context context, List<String> data, Map<Integer, String> map, Class<? extends AppCompatActivity>[] clazzs) {
         super(context, data);
         mMap = map;
         mClazzs = clazzs;
@@ -32,7 +32,7 @@ public class BasicUseAdapter extends CommonAdapter<String> {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.item_basic_use;
+        return R.layout.item_base;
     }
 
     @Override

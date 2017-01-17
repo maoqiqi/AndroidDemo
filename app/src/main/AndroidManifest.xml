@@ -242,6 +242,13 @@
         <provider
             android:name=".provider.PersonProvider"
             android:authorities="com.software.march.provider" />
+
+        <activity
+            android:name=".activity.ViewActivity"
+            android:label="@string/label_view" />
+        <activity
+            android:name=".activity.ViewLifecycleActivity"
+            android:label="@string/label_view_lifecycle" />
     </application>
 
 </manifest>

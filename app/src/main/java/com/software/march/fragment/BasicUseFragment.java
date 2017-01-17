@@ -18,7 +18,7 @@ import com.software.march.activity.EventActivity;
 import com.software.march.activity.HandlerActivity;
 import com.software.march.activity.ServiceActivity;
 import com.software.march.activity.StorageOptionsActivity;
-import com.software.march.adapter.BasicUseAdapter;
+import com.software.march.adapter.BaseAdapter;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -35,7 +35,7 @@ public class BasicUseFragment extends BaseFragment {
     private View rootView;
     private ListView listView;
     private String[] data;
-    private BasicUseAdapter adapter;
+    private BaseAdapter adapter;
 
     /**
      * Use this factory method to create a new instance of this fragment using the provided parameters.
@@ -49,7 +49,7 @@ public class BasicUseFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_basic_use, container, false);
+        rootView = inflater.inflate(R.layout.fragment_base, container, false);
         listView = (ListView) rootView.findViewById(R.id.list_view);
         return rootView;
     }
@@ -86,7 +86,7 @@ public class BasicUseFragment extends BaseFragment {
         clazzs[8] = AsyncTaskActivity.class;
         clazzs[9] = EventActivity.class;
         // 设置适配器
-        adapter = new BasicUseAdapter(getActivity(), Arrays.asList(data), map, clazzs);
+        adapter = new BaseAdapter(getActivity(), Arrays.asList(data), map, clazzs);
         listView.setAdapter(adapter);
     }
 }
