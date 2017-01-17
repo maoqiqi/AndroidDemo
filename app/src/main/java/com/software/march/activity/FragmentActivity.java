@@ -21,6 +21,7 @@ public class FragmentActivity extends AppCompatActivity implements View.OnClickL
 
     private Button btnStaticFragment;
     private Button btnDynamicFragment;
+    private Button btnLifecycle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +34,11 @@ public class FragmentActivity extends AppCompatActivity implements View.OnClickL
 
         btnStaticFragment = (Button) findViewById(R.id.btn_static_fragment);
         btnDynamicFragment = (Button) findViewById(R.id.btn_dynamic_fragment);
+        btnLifecycle = (Button) findViewById(R.id.btn_lifecycle);
 
         btnStaticFragment.setOnClickListener(this);
         btnDynamicFragment.setOnClickListener(this);
+        btnLifecycle.setOnClickListener(this);
     }
 
     @Override
@@ -46,6 +49,9 @@ public class FragmentActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.btn_dynamic_fragment:
                 startActivity(new Intent(this, DynamicFragmentActivity.class));
+                break;
+            case R.id.btn_lifecycle:
+                startActivity(new Intent(this, FragmentLifecycleActivity.class));
                 break;
         }
     }

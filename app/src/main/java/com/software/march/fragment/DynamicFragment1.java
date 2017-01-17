@@ -23,9 +23,6 @@ public class DynamicFragment1 extends Fragment {
 
         // 创建一个视图对象, 设置数据并返回
         TextView tv = new TextView(getActivity());
-        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,
-                FrameLayout.LayoutParams.MATCH_PARENT);
-        tv.setLayoutParams(params);
         tv.setText("DynamicFragment1");
         tv.setBackgroundColor(Color.RED);
 

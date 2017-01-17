@@ -125,6 +125,9 @@
             android:name=".activity.StaticFragmentActivity"
             android:label="@string/label_static_fragment" />
         <activity
+            android:name=".activity.FragmentLifecycleActivity"
+            android:label="@string/label_fragment_lifecycle" />
+        <activity
             android:name=".activity.DynamicFragmentActivity"
             android:label="@string/label_dynamic_fragment" />
         <activity

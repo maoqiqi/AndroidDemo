@@ -34,6 +34,7 @@
     <string name="label_fragment">Fragment</string>
     <string name="label_static_fragment">Fragment-静态加载</string>
     <string name="label_dynamic_fragment">Fragment-动态加载</string>
+    <string name="label_fragment_lifecycle">Fragment-生命周期</string>
 
     <string name="label_broadcast_receiver">Broadcast Receiver</string>
     <string name="label_send_broadcast">Send Broadcast</string>
