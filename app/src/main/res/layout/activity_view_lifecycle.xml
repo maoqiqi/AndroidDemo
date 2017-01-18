@@ -7,4 +7,33 @@
 
     <include layout="@layout/toolbar" />
 
+    <com.software.march.view.MyViewGroup
+        android:id="@+id/my_view_group"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#ffaa00">
+
+        <com.software.march.view.MyView
+            android:id="@+id/my_view"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#eaff00" />
+
+    </com.software.march.view.MyViewGroup>
+
+    <Button
+        android:id="@+id/btn_force_layout"
+        style="@style/btn_style"
+        android:text="强制重新布局" />
+
+    <Button
+        android:id="@+id/btn_force_draw"
+        style="@style/btn_style"
+        android:text="强制重绘" />
+
+    <Button
+        android:id="@+id/btn_remove_view"
+        style="@style/btn_style"
+        android:text="移除View" />
+
 </LinearLayout>
