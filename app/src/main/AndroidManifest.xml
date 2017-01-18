@@ -249,6 +249,9 @@
         <activity
             android:name=".activity.ViewLifecycleActivity"
             android:label="@string/label_view_lifecycle" />
+        <activity
+            android:name=".activity.CustomViewActivity"
+            android:label="@string/label_custom_view" />
     </application>
 
 </manifest>

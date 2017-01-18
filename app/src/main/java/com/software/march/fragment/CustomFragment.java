@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.software.march.R;
+import com.software.march.activity.CustomViewActivity;
 import com.software.march.activity.ViewActivity;
 import com.software.march.activity.ViewLifecycleActivity;
 import com.software.march.adapter.BaseAdapter;
@@ -63,6 +64,7 @@ public class CustomFragment extends BaseFragment {
         Class<? extends AppCompatActivity>[] clazzs = new Class[data.length];
         clazzs[0] = ViewActivity.class;
         clazzs[1] = ViewLifecycleActivity.class;
+        clazzs[2] = CustomViewActivity.class;
         adapter = new BaseAdapter(getActivity(), Arrays.asList(data), map, clazzs);
         listView.setAdapter(adapter);
     }
