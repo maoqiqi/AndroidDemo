@@ -16,9 +16,9 @@ import com.software.march.view.MyViewGroup;
 
 /**
  * @author Doc.March
- * @version V 1.Toast.LENGTH_SHORT
+ * @version V 1.0
  * @Description View生命周期
- * @date 2Toast.LENGTH_SHORT17/1/17
+ * @date 2017/1/17
  */
 public class ViewLifecycleActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -76,7 +76,7 @@ public class ViewLifecycleActivity extends AppCompatActivity implements View.OnC
             case R.id.btn_force_layout:
                 myViewGroup.requestLayout();
                 myView.requestLayout();
-                
+
                 Toast.makeText(this, "强制重新布局", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btn_force_draw:

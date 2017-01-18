@@ -252,6 +252,9 @@
         <activity
             android:name=".activity.CustomViewActivity"
             android:label="@string/label_custom_view" />
+        <activity
+            android:name=".activity.YouKuMenuActivity"
+            android:label="@string/label_you_ku_menu" />
     </application>
 
 </manifest>

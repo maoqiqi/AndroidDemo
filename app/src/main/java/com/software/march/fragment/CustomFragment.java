@@ -11,6 +11,7 @@ import com.software.march.R;
 import com.software.march.activity.CustomViewActivity;
 import com.software.march.activity.ViewActivity;
 import com.software.march.activity.ViewLifecycleActivity;
+import com.software.march.activity.YouKuMenuActivity;
 import com.software.march.adapter.BaseAdapter;
 
 import java.util.Arrays;
@@ -56,7 +57,7 @@ public class CustomFragment extends BaseFragment {
     protected void initData() {
         data = new String[]{
                 "View和ViewGroup", "View的生命周期",
-                "自定义View"
+                "自定义View", "优酷菜单"
         };
         Map<Integer, String> map = new HashMap<>();
         map.put(0, "View基础");
@@ -65,6 +66,7 @@ public class CustomFragment extends BaseFragment {
         clazzs[0] = ViewActivity.class;
         clazzs[1] = ViewLifecycleActivity.class;
         clazzs[2] = CustomViewActivity.class;
+        clazzs[3] = YouKuMenuActivity.class;
         adapter = new BaseAdapter(getActivity(), Arrays.asList(data), map, clazzs);
         listView.setAdapter(adapter);
     }

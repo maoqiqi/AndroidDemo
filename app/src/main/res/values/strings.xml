@@ -68,4 +68,5 @@
     <string name="label_view">View和ViewGroup</string>
     <string name="label_view_lifecycle">View生命周期</string>
     <string name="label_custom_view">自定义View</string>
+    <string name="label_you_ku_menu">优酷菜单</string>
 </resources>
