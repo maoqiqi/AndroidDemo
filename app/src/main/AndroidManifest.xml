@@ -202,6 +202,15 @@
         <activity
             android:name=".activity.KeyEventDemoActivity"
             android:label="@string/label_key_event_demo" />
+        <activity
+            android:name=".activity.AnimationActivity"
+            android:label="@string/label_animation" />
+        <activity
+            android:name=".activity.ViewAnimationActivity"
+            android:label="@string/label_view_animation" />
+        <activity
+            android:name=".activity.DrawableAnimationActivity"
+            android:label="@string/label_drawable_animation" />
 
         <!-- ========================== -->
         <!-- 静态注册 -->

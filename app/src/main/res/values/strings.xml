@@ -65,6 +65,11 @@
     <string name="label_key_event_demo">KeyEvent案例</string>
 
     <!-- ========================== -->
+    <string name="label_animation">动画</string>
+    <string name="label_view_animation">视图(View)动画</string>
+    <string name="label_drawable_animation">图片(Drawable)动画</string>
+
+    <!-- ========================== -->
     <string name="label_view">View和ViewGroup</string>
     <string name="label_view_lifecycle">View生命周期</string>
     <string name="label_custom_view">自定义View</string>
