@@ -264,6 +264,9 @@
         <activity
             android:name=".activity.YouKuMenuActivity"
             android:label="@string/label_you_ku_menu" />
+        <activity
+            android:name=".activity.IndexViewActivity"
+            android:label="@string/label_index_view" />
     </application>
 
 </manifest>
