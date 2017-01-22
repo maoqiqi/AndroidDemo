@@ -75,4 +75,11 @@
     <string name="label_custom_view">自定义View</string>
     <string name="label_you_ku_menu">优酷菜单</string>
     <string name="label_index_view">联系人快速索引</string>
+
+    <!-- ========================== -->
+    <string name="label_graphics">图片处理</string>
+    <string name="label_tu_pian">图片</string>
+    <string name="label_bitmap">Bitmap</string>
+    <string name="label_matrix">Matrix</string>
+    <string name="label_draw">绘制图形</string>
 </resources>

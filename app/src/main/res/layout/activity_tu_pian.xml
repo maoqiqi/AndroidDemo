@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <Button
+        android:id="@+id/btn_test_bitmap"
+        style="@style/btn_style"
+        android:text="测试Bitmap" />
+
+    <Button
+        android:id="@+id/btn_test_matrix"
+        style="@style/btn_style"
+        android:text="测试图片的缩放等处理" />
+
+    <Button
+        style="@style/btn_style"
+        android:background="@drawable/shape"
+        android:text="使用Shape做的按钮" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/selector_drawable"
+        android:clickable="true" />
+
+    <Button
+        style="@style/btn_style"
+        android:background="@drawable/selector_shape"
+        android:text="使用Selector+Shape做的按钮" />
+
+    <TextView
+        style="@style/txt_style"
+        android:text="9Patch图片的作用、原理、制作" />
+</LinearLayout>

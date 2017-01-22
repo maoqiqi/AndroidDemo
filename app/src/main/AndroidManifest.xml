@@ -211,6 +211,21 @@
         <activity
             android:name=".activity.DrawableAnimationActivity"
             android:label="@string/label_drawable_animation" />
+        <activity
+            android:name=".activity.GraphicsActivity"
+            android:label="@string/label_graphics" />
+        <activity
+            android:name=".activity.TuPianActivity"
+            android:label="@string/label_tu_pian" />
+        <activity
+            android:name=".activity.BitmapActivity"
+            android:label="@string/label_bitmap" />
+        <activity
+            android:name=".activity.MatrixActivity"
+            android:label="@string/label_matrix" />
+        <activity
+            android:name=".activity.DrawActivity"
+            android:label="@string/label_draw" />
 
         <!-- ========================== -->
         <!-- 静态注册 -->

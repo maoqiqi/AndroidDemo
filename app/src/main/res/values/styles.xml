@@ -13,6 +13,10 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <!--解决Android 5.0以上版本Button自带阴影效果的方法-->
+    <!--1.直接在要去掉button的XML文件中加：style="?Android:attr/borderlessButtonStyle"-->
+    <!--设置该属性就可以去掉自带的阴影。该属性在API 11及以上可用。-->
+    <!--2.直接在style中设置：parent="Base.Widget.AppCompat.Button.Borderless"-->
     <style name="btn_style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
