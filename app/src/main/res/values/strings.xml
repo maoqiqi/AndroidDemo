@@ -82,4 +82,5 @@
     <string name="label_bitmap">Bitmap</string>
     <string name="label_matrix">Matrix</string>
     <string name="label_draw">绘制图形</string>
+    <string name="label_switch">开关按钮</string>
 </resources>

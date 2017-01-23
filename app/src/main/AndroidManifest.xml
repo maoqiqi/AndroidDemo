@@ -282,6 +282,9 @@
         <activity
             android:name=".activity.IndexViewActivity"
             android:label="@string/label_index_view" />
+        <activity
+            android:name=".activity.SwitchActivity"
+            android:label="@string/label_switch" />
     </application>
 
 </manifest>
