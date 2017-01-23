@@ -8,6 +8,7 @@ import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AbsListView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -26,7 +27,7 @@ import java.util.List;
  * @Description 测试联系人快速索引
  * @date 2017/1/20
  */
-public class IndexViewActivity extends AppCompatActivity implements IndexView.OnIndexChangeListener {
+public class IndexViewActivity extends AppCompatActivity implements IndexView.OnIndexChangeListener, AbsListView.OnScrollListener {
 
     // sort_key:我们在取数据时可以按照该字段来排序
     // 联系人首字母
@@ -100,10 +101,12 @@ public class IndexViewActivity extends AppCompatActivity implements IndexView.On
         };
 
         listView.setAdapter(adapter);
+        listView.setOnScrollListener(this);
     }
 
     @Override
     public void onIndexChange(String word) {
+        handler.removeCallbacksAndMessages(null);
         tvWord.setVisibility(View.VISIBLE);
         tvWord.setText(word);
         for (int i = 0; i < list.size(); i++) {
@@ -115,13 +118,49 @@ public class IndexViewActivity extends AppCompatActivity implements IndexView.On
     }
 
     @Override
-    public void onEnd() {
-        new Handler() {
-            @Override
-            public void handleMessage(Message msg) {
-                super.handleMessage(msg);
-                tvWord.setVisibility(View.GONE);
-            }
-        }.sendEmptyMessageDelayed(0, 2000);
+    public void onEnd(String word) {
+        handler.sendEmptyMessageDelayed(0, 2000);
+    }
+
+    private Handler handler = new Handler() {
+
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            tvWord.setVisibility(View.GONE);
+        }
+    };
+
+    // ListView的状态改变时触发
+    // ListView的滚动有三种状态
+    // 1.SCROLL_STATE_IDLE：静止状态
+    // 2.SCROLL_STATE_TOUCH_SCROLL：手指滚动状态
+    // 3.SCROLL_STATE_FLING：手指不动了，但是屏幕还在滚动状态。
+    @Override
+    public void onScrollStateChanged(AbsListView view, int scrollState) {
+        switch (scrollState) {
+            case AbsListView.OnScrollListener.SCROLL_STATE_IDLE:// 空闲状态
+                break;
+            case AbsListView.OnScrollListener.SCROLL_STATE_FLING:// 滚动状态
+                break;
+            case AbsListView.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL:// 触摸后滚动
+                break;
+        }
+    }
+
+    /**
+     * 正在滚动
+     *
+     * @param view
+     * @param firstVisibleItem 第一个Item的位置
+     * @param visibleItemCount 可见的Item的数量
+     * @param totalItemCount   item的总数
+     */
+    @Override
+    public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+        if (firstVisibleItem >= 0 && firstVisibleItem < list.size()) {
+            String word = list.get(firstVisibleItem).getLabel();
+            indexView.setCheckWord(word);
+        }
     }
 }

@@ -130,12 +130,25 @@ public class IndexView extends View {
                 }
                 break;
             case MotionEvent.ACTION_UP:
-                if (onIndexChangeListener != null) {
-                    onIndexChangeListener.onEnd();
+                if (onIndexChangeListener != null && touchIndex < words.length) {
+                    onIndexChangeListener.onEnd(words[touchIndex]);
                 }
                 break;
         }
         return true;
+    }
+
+    // 设置选中的索引字母
+    public void setCheckWord(String word) {
+        for (int i = 0; i < words.length; i++) {
+            if (word.equals(words[i])) {
+                if (i != touchIndex) {
+                    touchIndex = i;
+                    invalidate();// 强制绘制
+                }
+                return;
+            }
+        }
     }
 
     /**
@@ -153,7 +166,7 @@ public class IndexView extends View {
         /**
          * 当手指离开时调用
          */
-        void onEnd();
+        void onEnd(String word);
     }
 
     /**
