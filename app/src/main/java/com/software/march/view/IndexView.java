@@ -123,10 +123,9 @@ public class IndexView extends View {
                 if (index != touchIndex) {
                     touchIndex = index;
                     invalidate();// 强制绘制
-
-                    if (onIndexChangeListener != null && touchIndex < words.length) {
-                        onIndexChangeListener.onIndexChange(words[touchIndex]);
-                    }
+                }
+                if (onIndexChangeListener != null && touchIndex < words.length) {
+                    onIndexChangeListener.onIndexChange(words[touchIndex]);
                 }
                 break;
             case MotionEvent.ACTION_UP:
