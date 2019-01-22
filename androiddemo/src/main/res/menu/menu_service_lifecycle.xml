@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/start_service"
+        android:orderInCategory="1"
+        android:title="启动服务"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/stop_service"
+        android:orderInCategory="2"
+        android:title="停止服务"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/bind_service"
+        android:orderInCategory="3"
+        android:title="绑定服务"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/unbind_service"
+        android:orderInCategory="4"
+        android:title="解绑服务"
+        app:showAsAction="never" />
+</menu>

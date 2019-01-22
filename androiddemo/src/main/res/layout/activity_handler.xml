@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <include layout="@layout/toolbar" />
+
+    <Button
+        android:id="@+id/btn_get_data_1"
+        style="@style/btn_style"
+        android:text="获取网络数据1" />
+
+    <Button
+        android:id="@+id/btn_get_data_2"
+        style="@style/btn_style"
+        android:text="获取网络数据2" />
+
+    <TextView
+        style="@style/txt_style"
+        android:gravity="left"
+        android:text="显示结果"
+        android:textColor="@color/colorAccent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_result"
+            style="@style/txt_style"
+            android:gravity="left" />
+
+    </ScrollView>
+</LinearLayout>

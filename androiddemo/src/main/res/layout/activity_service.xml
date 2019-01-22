@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <include layout="@layout/toolbar" />
+
+    <Button
+        android:id="@+id/btn_lifecycle"
+        style="@style/btn_style"
+        android:text="Service 生命周期" />
+
+    <Button
+        android:id="@+id/btn_bind_service"
+        style="@style/btn_style"
+        android:text="绑定服务三种方法" />
+
+</LinearLayout>

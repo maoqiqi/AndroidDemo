@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/txt_style"
+                android:text="发送一般广播(动态注册)" />
+
+            <Button
+                android:id="@+id/btn_register_normal_dynamic_broadcast"
+                style="@style/btn_style"
+                android:text="注册" />
+
+            <Button
+                android:id="@+id/btn_unregister_normal_dynamic_broadcast"
+                style="@style/btn_style"
+                android:text="解注册" />
+
+            <TextView
+                style="@style/txt_style"
+                android:layout_marginTop="32dp"
+                android:text="发送广播(动态/静态)(注册多个)" />
+
+            <Button
+                android:id="@+id/btn_register_broadcast"
+                style="@style/btn_style"
+                android:text="注册" />
+
+            <Button
+                android:id="@+id/btn_unregister_broadcast"
+                style="@style/btn_style"
+                android:text="解注册" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

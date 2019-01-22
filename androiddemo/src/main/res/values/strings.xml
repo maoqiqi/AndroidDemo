@@ -1,0 +1,195 @@
+<resources>
+    <string name="app_name">安卓案例</string>
+
+    <string name="label_activity">应用组件-Activity</string>
+    <string name="label_restore_instance">保存Activity状态</string>
+    <string name="restore_instance_des">在两种情况下，Activity 重获用户焦点时可保持状态完好：系统在销毁 Activity 后重建 Activity，Activity 必须恢复之前保存的状态；系统停止 Activity 后继续执行 Activity，并且 Activity 状态保持完好。</string>
+
+    <string name="label_start_mode">Activity start 方式</string>
+    <string name="label_launch_mode">Activity启动模式</string>
+    <string name="label_intent_filter">Intent-Filter</string>
+
+    <string name="label_ui">用户界面</string>
+    <string name="label_layout">常用的五种布局</string>
+    <string name="label_frame_layout">帧布局</string>
+    <string name="label_linear_layout">线性布局</string>
+    <string name="label_relative_layout">相对布局</string>
+    <string name="label_absolute_layout">绝对布局</string>
+    <string name="label_table_layout">表格布局</string>
+
+    <string name="label_simple_component">简单组件</string>
+    <string name="label_bar_component">ProgressBar、SeekBar组件</string>
+    <string name="bar_component_des">1. 滑动下面的滑杆后, 上面的进度条会同步\n2. 滑动到最大值时, 最上面的进度条消失</string>
+    <string name="label_dialog_component">Dialog组件</string>
+    <string name="label_menu_component">Menu组件</string>
+    <string name="label_list_view">ListView</string>
+    <string name="label_array_adapter">ArrayAdapter</string>
+    <string name="label_simple_adapter">SimpleAdapter</string>
+    <string name="label_simple_cursor_adapter">SimpleCursorAdapter</string>
+    <string name="label_base_adapter">BaseAdapter</string>
+    <string name="label_grid_view">GridView</string>
+
+    <string name="label_fragment">Fragment</string>
+    <string name="label_static_fragment">Fragment-静态加载</string>
+    <string name="label_dynamic_fragment">Fragment-动态加载</string>
+    <string name="label_fragment_lifecycle">Fragment-生命周期</string>
+
+    <string name="label_broadcast_receiver">Broadcast Receiver</string>
+    <string name="label_send_broadcast">Send Broadcast</string>
+
+    <string name="label_service">Service</string>
+    <string name="label_service_lifecycle">Service 生命周期</string>
+    <string name="label_bind_service">绑定服务</string>
+
+    <!-- ========================== -->
+    <string name="label_storage_options">存储选项</string>
+    <string name="label_shared_preferences">SharedPreferences</string>
+    <string name="label_file">文件</string>
+    <string name="label_sqlite">SQLite</string>
+    <string name="label_content_provider">系统 Content Provider</string>
+    <string name="label_person_provider">自定义 Content Provider</string>
+    <string name="label_net_work">网络</string>
+    <string name="label_data_backup">数据备份</string>
+    <string name="label_application_installation_location">应用程序安装位置</string>
+
+    <!-- ========================== -->
+    <string name="label_handler">消息机制</string>
+    <string name="label_handler_demo">Handler使用Demo</string>
+    <string name="label_async_task">异步任务</string>
+    <string name="label_event">事件机制</string>
+    <string name="label_motion_event">MotionEvent测试</string>
+    <string name="label_key_event">KeyEvent测试</string>
+    <string name="label_motion_event_demo">MotionEvent案例</string>
+    <string name="label_key_event_demo">KeyEvent案例</string>
+
+    <!-- ========================== -->
+    <string name="label_animation">动画</string>
+    <string name="label_view_animation">视图(View)动画</string>
+    <string name="label_drawable_animation">图片(Drawable)动画</string>
+
+    <!-- ========================== -->
+    <string name="label_toolbar">ToolBar</string>
+    <string name="label_coordinator_layout">CoordinatorLayoutActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="label_navigation_view">NavigationView</string>
+    <string name="label_tab_layout">TabLayout</string>
+
+    <!-- ========================== -->
+    <string name="label_view">View和ViewGroup</string>
+    <string name="label_view_lifecycle">View生命周期</string>
+    <string name="label_custom_view">自定义View</string>
+    <string name="label_you_ku_menu">优酷菜单</string>
+    <string name="label_index_view">联系人快速索引</string>
+
+    <!-- ========================== -->
+    <string name="label_graphics">图片处理</string>
+    <string name="label_tu_pian">图片</string>
+    <string name="label_bitmap">Bitmap</string>
+    <string name="label_matrix">Matrix</string>
+    <string name="label_draw">绘制图形</string>
+    <string name="label_switch">开关按钮</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <!-- ========================== -->
+    <string name="label_notification">Notification</string>
+
+    <!-- ========================== -->
+    <string name="label_okhttp">okhttp</string>
+    <string name="label_retrofit">okhttp + retrofit</string>
+    <string name="label_okhttputils">okhttp + okhttputils</string>
+
+    <!-- ========================== -->
+    <string name="label_rx_java2">rxjava2</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+</resources>
