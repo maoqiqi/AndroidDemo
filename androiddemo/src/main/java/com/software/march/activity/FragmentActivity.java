@@ -44,9 +44,6 @@ public class FragmentActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_static_fragment:
-                startActivity(new Intent(this, StaticFragmentActivity.class));
-                break;
             case R.id.btn_dynamic_fragment:
                 startActivity(new Intent(this, DynamicFragmentActivity.class));
                 break;

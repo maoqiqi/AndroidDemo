@@ -1,0 +1,42 @@
+由于系统在单独的进程中运行每个应用，且其文件权限会限制对其他应用的访问，因此您的应用无法直接启动其他应用中的组件， 但 Android 系统却可以。
+因此，要想启动其他应用中的组件，您必须向系统传递一则消息，说明您想启动特定组件的 Intent。 系统随后便会为您启动该组件。
+
+您包括在源代码中，但未在清单文件中声明的 Activity、服务和内容提供程序对系统不可见，因此也永远不会运行。
+不过，广播接收器可以在清单文件中声明或在代码中动态创建（如 BroadcastReceiver 对象）并通过调用 registerReceiver() 在系统中注册。
+
+
+<manifest ... >
+    ...
+    <application ... >
+        <activity android:name="com.example.project.ComposeEmailActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <data android:type="*/*" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
+
+
+声明应用要求
+
+基于 Android 系统的设备多种多样，并非所有设备都提供相同的特性和功能。
+为防止将您的应用安装在缺少应用所需特性的设备上，您必须通过在清单文件中声明设备和软件要求，为您的应用支持的设备类型明确定义一个配置文件。
+其中的大多数声明只是为了提供信息，系统不会读取它们，但 Google Play 等外部服务会读取它们，以便当用户在其设备中搜索应用时为用户提供过滤功能。
+
+例如，如果您的应用需要相机，并使用 Android 2.1（API 级别 7）中引入的 API，您应该像下面这样在清单文件中以要求形式声明这些信息：
+
+
+<manifest ... >
+    <uses-feature android:name="android.hardware.camera.any"
+                  android:required="true" />
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="19" />
+    ...
+</manifest>
+
+现在，没有相机且 Android 版本低于 2.1 的设备将无法从 Google Play 安装您的应用。
+
+不过，您也可以声明您的应用使用相机，但并不要求必须使用。
+在这种情况下，您的应用必须将 required 属性设置为 "false"，并在运行时检查设备是否具有相机，然后根据需要停用任何相机功能。
+
